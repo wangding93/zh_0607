@@ -9,6 +9,7 @@
       that.initActiveOn()
       that.initIPSelect()
       that.initActivityProgress()
+      that.initSelectItem()
     },
     // 初始化滑块
     initSwiper: function () {
@@ -19,6 +20,10 @@
         prevButton: '.role-swiper-button-prev',
         autoplay: 2000,
         autoplayDisableOnInteraction: false,
+        effect : 'fade',
+        fade: {
+          crossFade: true,
+        }
       })
       var newsSwiper = new Swiper('.news-swiper-container', {
         loop: true,
@@ -30,26 +35,16 @@
     // 初始化ip位置 更新坐标
     initIPSelect: function () {
       var that = activePage;
-      var val = '+886';
-      var valText = '台灣 +886';
+      var val = '65';
+      var valText = '新加坡 +65';
       $.ajax({
         type: "get",
         url: "./config/index2.php?action=iplookup",
         success: function (e) {
           var isocode = JSON.parse(e).isocode;
-          if (isocode == "AU") {   // 澳大利亚
-            val = "+61"
-            valText = "澳大利亞 +61"
-          } else if (isocode == "GB") {   // 英国
-            val = "+44"
-            valText = "英國 +44"
-          } else if (isocode == "SG") {   // 新加坡
-            val = "+65"
-            valText = "新加坡 +65"
-          } else if (isocode == "MY") {   // 马来西亚
-            val = "+60"
-            valText = "馬來西亞 +60"
-          }
+          var spaceData = that.validSpaceData(isocode)
+          val = spaceData.val
+          valText = spaceData.valText
           $(".J-select-value").html(valText);
           $("input[name='area']").val(val);
           $('.J-select-option-list .list').removeClass("active");
@@ -64,8 +59,13 @@
           that.setValidLength(val);
         }
       })
-
-
+    },
+    // 处理地区数据
+    validSpaceData(isocode){
+      // spaceCode 由 /js/space.js 变量引入
+      return spaceCode.find(function(item){
+        return item.isocode == isocode
+      })
     },
     // 初始化活动的开始与结束和Facebook链接
     initActiveOn: function () {
@@ -79,6 +79,7 @@
     },
     // 设置活动进度 与 侧边栏
     initActivityProgress: function () {
+      return;
       if (!activityProgress) {
         $(".default-list .list").removeClass("active");
       } else {
@@ -125,7 +126,7 @@
         $(".J-select-option-list").toggle();
       });
       // secect-list 点击事件
-      $(".J-select-option-list .list").on("click", function () {
+      $(".J-select-option-list").on("click",'.list', function () {
         $(".J-select-option-list").hide();
         $(".J-select-option-list .list").removeClass("active");
         $(".J-select-value").html($(this).html())
@@ -197,7 +198,6 @@
         return that.showDialog("輸入的手機號碼錯誤！");
       }
       var _data = $("form").serialize();
-      console.log(_data)
       $('.J-code-btn').prop("disabled", true)
       $.ajax({
         type: "get",
@@ -261,16 +261,26 @@
         }
       })
     },
+    // 初始化地区select数据
+    initSelectItem(){
+      // spaceCode 由 /js/space.js 变量引入
+      var tpl = ''
+      for (var i = 0; i < spaceCode.length; i++) {
+        var element = spaceCode[i];
+        tpl += '<div class="list" data-value="'+ element.val +'">'+ element.valText +'</div>'
+      }
+      $('.J-select-items').append(tpl)
+    },
     // 设置手机号验证位数
     setValidLength: function (e) {
       var that = activePage;
-      if (e == "+886") {
+      if (e == "886") {
         that.phoneValidLength = 10
-      } else if (e == "+852") {
+      } else if (e == "852") {
         that.phoneValidLength = 8
-      } else if (e == "+853") {
+      } else if (e == "853") {
         that.phoneValidLength = 8
-      } else if (e == "+65") {
+      } else if (e == "65") {
         that.phoneValidLength = 8
       } else {
         that.phoneValidLength = 99

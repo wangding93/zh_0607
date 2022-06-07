@@ -11,6 +11,7 @@
       that.initActiveOn()
       that.initIPSelect()
       that.initActivityProgress()
+      that.initSelectItem()
       // that.initMusicPlay()
     },
     // 初始化滑块
@@ -22,6 +23,10 @@
         autoplay: 1000,
         autoplayDisableOnInteraction: false,
         autoplay: false,
+        effect : 'fade',
+        fade: {
+          crossFade: true,
+        }
       })
       var videoSwiper = new Swiper('.video-swiper-container', {
         loop: true,
@@ -59,29 +64,16 @@
     // 初始化ip位置 更新坐标
     initIPSelect: function () {
       var that = activePage;
-      var val = '+886';
-      var valText = '台湾 +886';
+      var val = '65';
+      var valText = '新加坡 +65';
       $.ajax({
         type: "get",
         url: "./config/index2.php?action=iplookup",
         success: function (e) {
           var isocode = JSON.parse(e).isocode;
-          if (isocode == "TW") { //台湾
-            val = "+886"
-            valText = "台湾 +886"
-          } else if (isocode == "HK") {   // 香港
-            val = "+852"
-            valText = "香港 +852"
-          } else if (isocode == "MO") {   // 澳门
-            val = "+853"
-            valText = "澳门 +853"
-          } else if (isocode == "SG") {   // 新加坡
-            val = "+65"
-            valText = "新加坡 +65"
-          } else if (isocode == "MY") {   // 马来西亚
-            val = "+60"
-            valText = "马来西亚 +60"
-          }
+          var spaceData = that.validSpaceData(isocode)
+          val = spaceData.val
+          valText = spaceData.valText
           $("select[name='area']").val(val);
           $(".J-select-value").html(valText)
           that.setValidLength(val);
@@ -92,8 +84,16 @@
         }
       })
     },
+    // 处理地区数据
+    validSpaceData(isocode){
+      // spaceCode 由 /js/space.js 变量引入
+      return spaceCode.find(function(item){
+        return item.isocode == isocode
+      })
+    },
     // 设置活动进度
     initActivityProgress: function () {
+      return
       if (!activityProgress) {
         $(".default-list .list").removeClass("active");
       } else {
@@ -267,16 +267,27 @@
         }
       })
     },
+    // 初始化地区select数据
+    initSelectItem(){
+      // spaceCode 由 /js/space.js 变量引入
+      var tpl = ''
+      for (var i = 0; i < spaceCode.length; i++) {
+        var element = spaceCode[i];
+        // tpl += '<div class="list" data-value="'+ element.val +'">'+ element.valText +'</div>'
+        tpl += '<option value="'+ element.val +'">'+ element.valText +'</option>'
+      }
+      $('.J-select-value-hide').append(tpl)
+    },
     // 设置手机号验证位数
     setValidLength: function (e) {
       var that = activePage;
-      if (e == "+886") {
+      if (e == "886") {
         that.phoneValidLength = 10
-      } else if (e == "+852") {
+      } else if (e == "852") {
         that.phoneValidLength = 8
-      } else if (e == "+853") {
+      } else if (e == "853") {
         that.phoneValidLength = 8
-      } else if (e == "+65") {
+      } else if (e == "65") {
         that.phoneValidLength = 8
       } else {
         that.phoneValidLength = 99

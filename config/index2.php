@@ -66,10 +66,16 @@ try
     }elseif(isset($action) && $action == 'setphone'){//点击发送验证码
         $phone = $_REQUEST['phone'];
 	    $area = $_REQUEST['area'];
-        $area = substr($area,1,5);
-//        $phone = $area.$phone;
-//	var_dump($phone);exit;
-
+        // $area = substr($area,1,5);
+        //判断
+        if(in_array($area, ["852"]))
+        {
+            //处理 前面加上00 852 --> 00852
+            $area = "00".$area;
+        }
+        // TODO
+        // $sms_re = sendMessageNew ("0085267642412",8888);
+        $phone = $area.$phone;
         if(empty($phone)){
             close_error($link,-1);
         }
@@ -144,12 +150,13 @@ function get_real_ip()
 }
 
 function sendMessageNew($phone, $code) {
-    include("../../aliyundysms/api_demo/SmsDemo.php");
+    include("../aliyundysms/api_demo/SmsDemo.php");
     $response = SmsDemo::sendSms($phone,$code);
+    // var_dump($response);exit;
     $re_json = json_encode($response);
     $file_name = './log/'.date('Ymd',time()).".log";
-//    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>in>>>>>'.$phone.'>>>'.$code."\n",FILE_APPEND);
-//    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>out>>>>>'.$re_json."\n",FILE_APPEND);
+    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>in>>>>>'.$phone.'>>>'.$code."\n",FILE_APPEND);
+    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>out>>>>>'.$re_json."\n",FILE_APPEND);
 
     $sgins = false ;
     $ret = json_decode($re_json,true);

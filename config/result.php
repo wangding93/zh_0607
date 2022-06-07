@@ -3,7 +3,7 @@
 include_once './conn.php';
 
 $data = array();
-$sql = "select count(*) as cc, DATE_FORMAT(createtime,'%Y-%m-%d') as zday from tb_phone_pfft where createtime > '2018-08-31' group by zday";
+$sql = "select count(*) as cc, DATE_FORMAT(createtime,'%Y-%m-%d') as zday from xgame_active_booking where createtime > '2018-08-31' group by zday";
 $query = mysqli_query($link,$sql);
 while($re = $query->fetch_assoc()){
 	$data[] = $re;

@@ -91,17 +91,12 @@
             <!-- 手机号输入框 -->
             <div class="form-phone-group cf">
               <div class="secect-btn J-secect-btn">
-                <span class="select-value J-select-value" style="color: #fde872">台湾 +886</span>
-                <select name="area" id="" class="select-value-hide">
+                <span class="select-value J-select-value">新加坡 +65</span>
+                <select name="area" id="" class="select-value-hide J-select-value-hide">
                   <option value="">选择地区</option>
-                  <option value="+886">台湾 +886</option>
-                  <option value="+65">新加坡 +65</option>
-                  <option value="+60">马来西亚 +60</option>
-                  <option value="+61">澳大利亚 +61</option>
-                  <option value="+44">英国 +44</option>
                 </select>
-                <i class="select-icon"></i>
               </div>
+              <i class="select-icon"></i>
               <div class="phone-input">
                 <input type="tel" name="phone" placeholder="请输入正确的手机号">
               </div>
@@ -304,7 +299,7 @@
       <div class="swiper-container role-swiper-container">
         <div class="swiper-wrapper">
           <!-- 角色1 -->
-          <div class="swiper-slide cf">
+          <div class="swiper-slide swiper-slide-1 cf">
             <div class="layout">
               <div class="role-detail cf">
                 <div class="gif-wrap trans">
@@ -316,10 +311,10 @@
             </div>
           </div>
           <!-- 角色2 -->
-          <div class="swiper-slide cf">
+          <div class="swiper-slide swiper-slide-2 cf">
             <div class="layout">
               <div class="role-detail cf">
-                <div class="gif-wrap trans">
+                <div class="gif-wrap">
                   <div class="gif-step step-2"></div>
                 </div>
               </div>
@@ -328,34 +323,34 @@
             </div>
           </div>
           <!-- 角色3 -->
-          <div class="swiper-slide cf" style="overflow: unset;">
+          <div class="swiper-slide swiper-slide-3 cf" style="overflow: unset;">
             <div class="layout">
               <div class="role-detail cf">
-                <div class="gif-wrap trans">
+                <div class="gif-wrap">
                   <div class="gif-step step-3"></div>
                 </div>
               </div>
               <img src="./img/xgamemp/zh-role-name-3.png" class="role-name" alt="">
-              <img src="./img/xgamemp/zh-role-slider-03.png" class="role-img" alt="" style="max-width: 11rem;max-height: 11rem;">
+              <img src="./img/xgamemp/zh-role-slider-03.png" class="role-img" alt="">
             </div>
           </div>
           <!-- 角色4 -->
-          <div class="swiper-slide cf">
+          <div class="swiper-slide swiper-slide-4 cf">
             <div class="layout">
               <div class="role-detail cf">
-                <div class="gif-wrap trans">
+                <div class="gif-wrap">
                   <div class="gif-step step-4"></div>
                 </div>
               </div>
               <img src="./img/xgamemp/zh-role-name-4.png" class="role-name" alt="">
-              <img src="./img/xgamemp/zh-role-slider-04.png" class="role-img" alt="" style="max-height: 7rem;">
+              <img src="./img/xgamemp/zh-role-slider-04.png" class="role-img" alt="">
             </div>
           </div>
           <!-- 角色5 -->
-          <div class="swiper-slide cf">
+          <div class="swiper-slide swiper-slide-5 cf">
             <div class="layout">
               <div class="role-detail cf">
-                <div class="gif-wrap trans">
+                <div class="gif-wrap">
                   <div class="gif-step step-5"></div>
                 </div>
               </div>
@@ -364,10 +359,10 @@
             </div>
           </div>
           <!-- 角色6 -->
-          <div class="swiper-slide cf">
+          <div class="swiper-slide swiper-slide-6 cf">
             <div class="layout">
               <div class="role-detail cf">
-                <div class="gif-wrap trans">
+                <div class="gif-wrap">
                   <div class="gif-step step-6"></div>
                 </div>
               </div>
@@ -398,7 +393,9 @@
     </div>
     <!-- 左侧按钮 -->
     <div class="slide-icon-one">
-      <a href="https://www.facebook.com/SummonersGAME" target="_blank" class="link-btn-hml"></a>
+      <a href="https://www.facebook.com/SummonersGAME" target="_blank" class="link-btn-hml">
+        <div class="step-xl "></div>
+      </a>
       <a href="https://www.facebook.com/SummonersGAME" target="_blank" class="link-btn-fb">
         <div class="step-fb-btn"></div>
       </a>
@@ -454,6 +451,7 @@
     </div>
   </div>
 
+  <script src="./js/space.js"></script>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/swiper-3.4.2.jquery.min.js"></script>
   <script src="./js/main-mp.js?v=2022060502"></script>

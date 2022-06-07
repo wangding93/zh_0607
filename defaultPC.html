@@ -80,18 +80,15 @@
             <!-- 手机号输入框 -->
             <div class="form-phone-group cf">
               <div class="secect-btn J-secect-btn">
-                <span class="select-value J-select-value">馬來西亞 +60</span>
+                <span class="select-value J-select-value">马来西亚 +60</span>
                 <i class="select-icon"></i>
               </div>
               <div class="phone-input">
                 <input type="text" name="phone" placeholder="請輸入正確的手機號">
               </div>
               <div class="select-option-list J-select-option-list">
-                <div class="list" data-value="1">台灣 +886</div>
-                <div class="list" data-value="2">香港 +852</div>
-                <div class="list" data-value="3">澳門 +853</div>
-                <div class="list" data-value="4">新加坡 +65</div>
-                <div class="list" data-value="5">馬來西亞 +60</div>
+                <input type="hidden" value="886" name="area">
+                <div class="scroll J-select-items"></div>
               </div>
             </div>
             <!-- 验证码输入框 -->
@@ -363,6 +360,7 @@
     </div>
   </div> -->
 
+  <script src="./js/space.js"></script>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/swiper-3.4.2.jquery.min.js"></script>
   <script src="./js/main-pc.js?v=060501"></script>

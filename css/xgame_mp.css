@@ -255,6 +255,7 @@
 }
 
 .dating-mark {
+  position: relative;
   background: url("../img/xgamemp/zh-gift-mark.png") no-repeat center / 100% 100%;
   width: 1.6rem;
   height: 1.6rem;
@@ -264,6 +265,35 @@
   background: url("../img/xgamemp/zh-gift-mark-active.png") no-repeat center / 100% 100%;
   width: 1.6rem;
   height: 1.6rem;
+}
+
+.dating-mark.active::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 128px;
+  height: 128px;
+  background-image: url('../img/xgamemp/zh-step-mark.png');
+  background-size: auto 100%;
+  animation: step-mark 2s steps(16, end) infinite;
+}
+@keyframes step-mark{
+  0%{
+    background-position: 1600% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+@-webkit-keyframes step-mark{
+  0%{
+    background-position: 1600% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
 }
 
 #root #video .form-bonus-dating-four {
@@ -278,7 +308,36 @@
 }
 
 #root #video .form-bonus-dating-four .dating-four.active {
+  position: relative;
   background: url("../img/xgamemp/ui_yxz_ysb_0049_active.png") no-repeat center / 100% 100%;
+}
+#root #video .form-bonus-dating-four .dating-four.active::after{
+  content: '';
+  position: absolute;
+  top: 48%;
+  left: 37%;
+  transform: translate(-50%,-50%);
+  width: 256px;
+  height: 256px;
+  background-image: url('../img/xgamemp/zh-step-hml.png');
+  background-size: auto 100%;
+  animation: step-hml 2s steps(30, end) infinite;
+}
+@keyframes step-hml{
+  0%{
+    background-position: 3000% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+@-webkit-keyframes step-hml{
+  0%{
+    background-position: 3000% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
 }
 
 #root #video .form-bonus-dating-four .dating-mark {
@@ -438,6 +497,17 @@
   width: 1.5rem;
   margin: 0 0 .1rem;
 }
+#root .slide-icon-one .link-btn-hml .step-xl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 128px;
+  height: 128px;
+  background-image: url('../img/xgamemp/zh-step-xl.png');
+  background-size: auto 100%;
+  animation: step-xl 2s steps(30, end) infinite;
+}
 
 #root .slide-icon-one .link-btn-fb {
   position: relative;
@@ -458,21 +528,6 @@
   background-size: auto 100%;
   animation: fb-btn 2s steps(30, start) infinite;
 }
-
-.step-xl {
-  width: 2.56rem;
-  height: 2.56rem;
-  background-image: url('../img/xgamemp/zh-step-xl.png');
-  background-size: auto 100%;
-  animation: step-xl 2s steps(30, end) infinite;
-}
-
-/* #root #role .footer-notice .notice-content {
-  position: absolute;
-  top: 85px;
-  left: 36px;
-  width: 81%;
-} */
 
 #root #role .dataing-icon a {
   display: block;
@@ -729,15 +784,6 @@
     background-size: cover;
   }
 
-  /*.audio-btn img{*/
-  /*    position: fixed;*/
-  /*    width: 30px;*/
-  /*    height: 30px;*/
-  /*    z-index: 1;*/
-  /*    left: 80%;*/
-  /*    top: 75px;*/
-  /*}*/
-
   .navigation-btn {
     position: relative;
     width: 24px;
@@ -804,10 +850,6 @@
     top: 230px;
   }
 
-  /* #root #video .title {
-    top: 230px;
-  } */
-
   .navigation-btn {
     left: 88%;
   }
@@ -817,29 +859,17 @@
 390 pro
  */
 @media (max-width: 390px) and (min-width: 361px) {
-  /* #root .section-video .video-swiper-container {
-    top: 250px;
-  } */
+  
 }
 
 @media (max-width: 400px) {
-  /* #root .section-video .video-swiper-container .swiper-wrapper .swiper-slide .layout .bg {
-    top: 60%;
-  } */
+  
 }
 
 /**
 plus
  */
 @media (min-width: 414px) {
-  /* #root .section-video .video-swiper-container {
-    top: 270px;
-  } */
-
-  /* #root .section-video .video-swiper-container .swiper-wrapper .swiper-slide .layout .bg {
-    top: 58%;
-    left: 50.6%;
-  } */
 
   .section-top-banner a {
     left: 58%;
@@ -854,31 +884,10 @@ plus
 ipad
  */
 @media (min-width: 500px) {
-  /* #root #form .form-bonus-dating-one img:nth-child(3) {
-    top: -125px;
-  } */
-
-  /* #root #form .form-bonus-dating-three img:nth-child(2) {
-    top: -3rem;
-  } */
 
   #root .section-form {
     height: 18rem;
   }
-
-  /* #banner .bonus-tips span {
-    top: 14.5rem;
-    left: 82px;
-  } */
-
-  /* #root .section-video .video-swiper-container {
-    top: 28.7%;
-  } */
-
-  /* #root .section-video .video-swiper-container .swiper-wrapper .swiper-slide .layout .bg {
-    top: 58%;
-    left: 47.5%;
-  } */
 
   .section-top-banner a {
     left: 68%;
@@ -892,30 +901,6 @@ ipad
     top: 28%;
     left: 30px;
   }
-
-  /* #root .game-news {
-    height: 400px;
-    line-height: 40px;
-  } */
-
-  /* #root .game-news .news-content ul li {
-    line-height: 42px;
-  } */
-
-  /* #root #role .footer-notice .notice-content {
-    left: 80px;
-    top: 160px;
-  } */
-
-  /* #root #role .footer-notice span {
-    top: 86px;
-    left: 60px;
-  } */
-
-  /* #root #role .footer-notice .notice {
-    left: 130px;
-    top: 103px;
-  } */
 }
 
 

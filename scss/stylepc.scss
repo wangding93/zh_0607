@@ -267,27 +267,42 @@ body {
             top: 66px;
             width: 298px;
             height: 306px;
-            overflow-y: auto;
             background: url("../img/xgamepc/zh-select-option-list-bg.png") no-repeat center / 100%;
-            padding: 10px 0 0 0;
+            padding: 10px 10px 10px 0;
             cursor: pointer;
             z-index: 1;
 
-            .list {
-              width: 274px;
-              height: 50px;
-              margin: 0 auto;
-              color: #fff;
-              font-size: 30px;
-              line-height: 50px;
-              padding: 0 0 0 10px;
-
-              &:hover {
-                background: url("../img/xgamepc/zh-select-list-bg.png") no-repeat center / 100%;
+            .scroll {
+              height: 100%;
+              overflow-y: auto;
+              &::-webkit-scrollbar{
+                width: 8px;
               }
+              &::-webkit-scrollbar-track{
+                width: 10px;
+                background: transparent;
+              }
+              &::-webkit-scrollbar-thumb{
+               background: #bbb;
+               border-radius: 4px;
+              }
+              .list {
+                width: 274px;
+                height: 50px;
+                margin: 0 auto;
+                color: #fff;
+                font-size: 20px;
+                line-height: 50px;
+                padding: 0 0 0 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &:hover {
+                  background: url("../img/xgamepc/zh-select-list-bg.png") no-repeat center / 100%;
+                }
 
-              &.active {
-                background: url("../img/xgamepc/zh-select-list-bg.png") no-repeat center / 100%;
+                &.active {
+                  background: url("../img/xgamepc/zh-select-list-bg.png") no-repeat center / 100%;
+                }
               }
             }
           }
