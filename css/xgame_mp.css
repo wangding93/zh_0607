@@ -1,0 +1,927 @@
+.section-top-banner {
+  position: fixed;
+  top: 0px;
+  background: url("../img/xgamemp/ui_yxz_ysb_0006.png") no-repeat center / 100% 100%;
+  width: 100%;
+  height: 58px;
+  z-index: 999;
+}
+
+.section-top-banner span {
+  background: url("../img/xgamemp/ui_yxz_ysb_0003.png");
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  position: fixed;
+  border-radius: 3px;
+  top: 4px;
+  left: 4px;
+  background-size: cover;
+}
+
+.section-top-banner p {
+  font-size: 14px;
+  color: gray;
+  font-family: Arial;
+  margin-left: 60px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.section-top-banner>p:nth-child(2) {
+  margin-top: 13px;
+  font-weight: bolder;
+}
+
+.section-top-banner>p:nth-child(3) {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.section-top-banner a {
+  background: url("../img/xgamemp/ui_yxz_ysb_0001.png");
+  width: 105px;
+  height: 30px;
+  z-index: 1;
+  background-size: cover;
+  border-radius: 3px;
+  top: 15px;
+  left: 210px;
+  position: fixed;
+}
+
+.section-top-banner a:active {
+  background: url("../img/xgamemp/ui_yxz_ysb_0002.png");
+  width: 105px;
+  height: 30px;
+  z-index: 1;
+  background-size: cover;
+  border-radius: 3px;
+  top: 15px;
+  left: 210px;
+  position: fixed;
+}
+
+.section-top-banner>span:nth-child(5) {
+  background: url("../img/xgamemp/ui_yxz_ysb_0004.png");
+  width: 22px;
+  height: 22px;
+  z-index: 1;
+  background-size: cover;
+  top: 18px;
+  left: 330px;
+}
+
+#root .head-right a {
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  display: block;
+  float: none;
+  width: 90%;
+  margin: 0 0 0 10%;
+  text-align: left;
+  padding: 0 0 0 18px;
+  line-height: 44px;
+}
+
+#root .head-right .ul {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+
+
+/**
+商店页
+ */
+#root .store-btn {
+  width: 7.12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#root .store-btn a {
+  text-decoration: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+#root .store-btn img {
+  width: 100%;
+}
+
+#banner .bonus-tips {
+  background: url("../img/xgamemp/ui_yxz_ysb_0053.png") no-repeat center / 100% 100%;
+  width: 6rem;
+  height: 1rem;
+  margin: .3rem auto 0;
+}
+
+/*#banner .bonus-tips img {*/
+/*    width: 88%;*/
+/*}*/
+
+#root .head-right a:before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border: 2px #f8ebdc solid;
+  transform: rotate(45deg);
+  top: 45%;
+  left: 0;
+}
+
+#banner p {
+  font-size: 14px;
+  color: yellow;
+  text-align: center;
+}
+
+#root #form .form-content .form-step {
+  width: 1.6rem;
+  height: 0.35rem;
+  margin: 0 0 .16rem .2rem;
+}
+
+#root #form .form-content .form-step.step-1 {
+  background: url("../img/xgamemp/zh-from-steap-1.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-content .form-step.step-2 {
+  width: 1.76rem;
+  background: url("../img/xgamemp/zh-from-steap-2.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bounus-tips .bounus-tips {
+  width: 4.07rem;
+  height: 0.35rem;
+  margin: 0 auto .2rem;
+  background: url("../img/xgamemp/zh-form-bounus-tips.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bounus-tips .bounus-gift {
+  width: 80%;
+  height: 1.6rem;
+  margin: 0 auto;
+  background: url("../img/xgamemp/zh-form-bounus-gift.png") no-repeat center / 100% auto;
+}
+
+#root #form .form-bonus-dating {
+  position: relative;
+}
+
+#root #form .form-bonus-dating .bonus-dating-title {
+  width: 6.67rem;
+  height: 1.68rem;
+  margin: 0 auto .3rem;
+  background: url("../img/xgamemp/zh-bonus-dating-title.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bonus-dating .dating-one {
+  position: relative;
+  width: 6.18rem;
+  height: 2.03rem;
+  margin: 0 auto;
+  background: url("../img/xgamemp/zh-dating-one.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bonus-dating .dating-one .dating-mark {
+  position: absolute;
+  top: .5rem;
+  right: -.5rem;
+}
+
+#root #form .form-bonus-dating .dating-two {
+  position: relative;
+  width: 3.8rem;
+  height: 4.22rem;
+  margin: 0 0 0 .3rem;
+  background: url("../img/xgamemp/zh-dating-two.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bonus-dating .dating-two .dating-mark {
+  position: absolute;
+  top: 1rem;
+}
+
+#root #form .form-bonus-dating .dating-two.active {
+  background: url("../img/xgamemp/zh-dating-two-active.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bonus-dating .dating-three {
+  position: absolute;
+  right: 0;
+  bottom: -.8rem;
+  width: 3.99rem;
+  height: 4.29rem;
+  background: url("../img/xgamemp/zh-dating-three.png") no-repeat center / 100% 100%;
+}
+
+#root #form .form-bonus-dating .dating-three .dating-mark {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+}
+
+#root #form .form-bonus-dating .dating-three.active {
+  background: url("../img/xgamemp/zh-dating-three-active.png") no-repeat center / 100% 100%;
+}
+
+#root .section-gameinfo {
+  height: 15rem;
+  background: url("../img/xgamemp/ui_yxz_ysb_0075.png") no-repeat center / 100% 100%;
+}
+
+#root #gameinfo img:nth-child(1) {
+  position: relative;
+  top: 30%;
+  width: 90%;
+  left: 5%;
+}
+
+#root #gameinfo .gameinfo-icon {
+  position: relative;
+  top: 35%;
+}
+
+#root #gameinfo .gameinfo-container img {
+  position: relative;
+  width: 4%;
+}
+
+.dating-mark {
+  background: url("../img/xgamemp/zh-gift-mark.png") no-repeat center / 100% 100%;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.dating-mark.active {
+  background: url("../img/xgamemp/zh-gift-mark-active.png") no-repeat center / 100% 100%;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+#root #video .form-bonus-dating-four {
+  position: relative;
+}
+
+#root #video .form-bonus-dating-four .dating-four {
+  background: url("../img/xgamemp/ui_yxz_ysb_0049.png") no-repeat center / 100% 100%;
+  width: 7.5rem;
+  height: 5.2rem;
+  margin: 0 auto;
+}
+
+#root #video .form-bonus-dating-four .dating-four.active {
+  background: url("../img/xgamemp/ui_yxz_ysb_0049_active.png") no-repeat center / 100% 100%;
+}
+
+#root #video .form-bonus-dating-four .dating-mark {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+}
+
+
+#root #video .video-border-pic {
+  width: 6.93rem;
+  height: 3.92rem;
+  margin: 0 auto .16rem;
+  background: url("../img/xgamemp/ui_yxz_ysb_0045.png") no-repeat center / 100% 100%;
+  padding: 0.1rem 0.1rem;
+}
+
+#root #video .news {
+  border: 1px solid darkslategray;
+  position: absolute;
+  width: 90%;
+  height: 200px;
+  left: 22px;
+  top: 325px;
+}
+
+#root #video .news-hd {
+  margin: 0 5px;
+  margin-top: -17px;
+  position: absolute;
+  top: 10px;
+  z-index: 999;
+}
+
+#root #video .news-hd li {
+  display: inline-block;
+  padding: 25px 0 17px 0;
+  cursor: pointer;
+  position: relative;
+  width: 65px;
+  text-align: center;
+  font-size: 0;
+}
+
+#root #video .news-hd a {
+  font-size: 14px;
+  font-family: "微软雅黑", Tahoma, sans-serif;
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+#root #video .news-hd .sprite {
+  background: url("../img/xgamemp/ui_yxz_ysb_0042.png");
+}
+
+#root #video .news-hd .icon-push {
+  position: absolute;
+  width: 75%;
+  height: 2px;
+  top: 42px;
+  left: 10px;
+}
+
+#root #video .news-border-line {
+  position: relative;
+  border-bottom: 1px solid darkslategray;
+  width: 100%;
+  top: 55px;
+}
+
+/**
+文字列表部分
+ */
+#root #video .news-bd a {
+  font-size: 14px;
+  font-family: "微软雅黑", Tahoma, sans-serif;
+  text-decoration: none;
+  color: antiquewhite;
+  /*font-weight: bold;*/
+}
+
+
+#root #video .news-bd .news-list li {
+  height: 21px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 15px 0;
+  margin-left: 17px;
+  color: antiquewhite;
+  font-family: "微软雅黑", Tahoma, sans-serif;
+}
+
+#root #video .news-bd .news-list img {
+  width: 10px;
+}
+
+/**
+注意事项
+ */
+
+#root #role .footer-notice {
+  /* position: absolute; */
+  width: 6.8rem;
+  margin: 0 auto .4rem;
+  padding: .28rem .3rem;
+  border: .02rem solid rgba(255, 255, 255, .2);
+  background: rgba(0, 0, 0, .4);
+  box-shadow: rgba(0, 0, 0, .4) 0px 0px .2rem;
+  border-radius: .1rem;
+}
+
+#root #role .footer-notice span {
+  display: inline-block;
+  background: url("../img/xgamemp/ui_yxz_ysb_0031.png") no-repeat center / 100% 100%;
+  width: .6rem;
+  height: .6rem;
+  margin: 0 .16rem 0 0;
+}
+
+#root #role .footer-notice .notice {
+  display: flex;
+  align-items: center;
+  color: yellow;
+  margin: 0 0 .3rem 0;
+  font-size: .3rem;
+}
+
+#root #role .footer-notice p {
+  font-size: .26rem;
+  color: antiquewhite;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: .46rem;
+  word-break: break-all;
+}
+
+#root .slide-icon-one {
+  position: fixed;
+  width: 1.5rem;
+  height: 3.3rem;
+  top: 50%;
+  right: 0;
+  z-index: 999;
+  display: none;
+}
+
+#root .slide-icon-one .link-btn-hml {
+  position: relative;
+  display: block;
+  background: url("../img/xgamemp/zh-link-grouphml.png") no-repeat center / 100% 100%;
+  height: 1.48rem;
+  width: 1.5rem;
+  margin: 0 0 .1rem;
+}
+
+#root .slide-icon-one .link-btn-fb {
+  position: relative;
+  display: block;
+  background: url("../img/xgamemp/zh-link-group-fb.png") no-repeat center / 100% 100%;
+  height: 1.48rem;
+  width: 1.5rem;
+}
+
+#root .slide-icon-one .link-btn-fb .step-fb-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 128px;
+  height: 128px;
+  background-image: url('../img/xgamemp/zh-step-fb-btn.png');
+  background-size: auto 100%;
+  animation: fb-btn 2s steps(30, start) infinite;
+}
+
+.step-xl {
+  width: 2.56rem;
+  height: 2.56rem;
+  background-image: url('../img/xgamemp/zh-step-xl.png');
+  background-size: auto 100%;
+  animation: step-xl 2s steps(30, end) infinite;
+}
+
+/* #root #role .footer-notice .notice-content {
+  position: absolute;
+  top: 85px;
+  left: 36px;
+  width: 81%;
+} */
+
+#root #role .dataing-icon a {
+  display: block;
+  background: url("../img/xgamemp/ui_yxz_ysb_0013.png") no-repeat center / 100% 100%;
+  height: 2.07rem;
+  width: 7.5rem;
+}
+
+/**
+新闻列表
+ */
+
+#root #video .news-swiper-container {
+  position: absolute;
+  width: 90%;
+  height: 25%;
+  border: 1px solid darkslategray;
+  left: 22px;
+  top: 62%;
+}
+
+#root #video .news-swiper-container .news-list {
+  position: absolute;
+  top: 40px;
+}
+
+#root #video .news-swiper-container .news-list li {
+  /*height: 21px;*/
+  line-height: 21px;
+  font-size: 14px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 15px 0;
+  margin-left: 17px;
+  color: antiquewhite;
+  font-family: "微软雅黑", Tahoma, sans-serif;
+}
+
+#root #video .news-swiper-container .news-list a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+#root #video .news-swiper-container .news-list img {
+  width: 10px;
+}
+
+#root #video .news-swiper-container .swiper-pagination-custom ul li {
+  display: inline-block;
+  padding: 25px 0 17px 0;
+  cursor: pointer;
+  position: relative;
+  width: 65px;
+  text-align: center;
+  font-size: 0;
+}
+
+#root #video .news-swiper-container .swiper-pagination-custom li a {
+  font-size: 14px;
+  font-family: "微软雅黑", Tahoma, sans-serif;
+  text-decoration: none;
+  color: antiquewhite;
+  font-weight: bold;
+}
+
+#root .game-news {
+  border: 0.01rem solid #2d2a2b;
+  width: 6.93rem;
+  height: 3rem;
+  margin: 0 auto .4rem;
+  padding: 0 .3rem;
+}
+
+#root .game-news .news-title {
+  border-bottom: 0.01rem solid #3d3a3b;
+}
+
+#root .game-news .news-title ul {
+  display: flex;
+}
+
+#root .game-news .news-title ul li {
+  height: .48rem;
+  line-height: .48rem;
+  color: #fff;
+  font-size: .24rem;
+  padding: 0 0.14rem;
+  border-bottom: 0.03rem solid transparent;
+  margin: 0 .15rem;
+}
+
+#root .game-news .news-title ul li.active {
+  color: #ffbc59;
+  border-bottom: 0.03rem solid #ffbc59;
+}
+
+#root .game-news .news-content {
+  padding-bottom: .2rem;
+  height: 2.3rem;
+  overflow-y: auto;
+}
+
+#root .game-news .news-content ul {
+  padding: .2rem 0;
+}
+
+#root .game-news .news-content ul li {
+  font-size: .24rem;
+  padding: 0 0 0 14px;
+  color: darkslategray;
+  line-height: 0.3rem;
+  margin: 0 0 .2rem;
+}
+
+#root .game-news .news-content ul li a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+#root .game-news .news-content ul li img {
+  width: 0.18rem;
+}
+
+.play {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 5px #ccc;
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/**
+视频播放
+ */
+
+#root #banner .movie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background: url('../img/xgamemp/zh-movie-play.png') no-repeat center / 100% 100%;
+}
+
+#root #banner .movie .movie-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background: url('../img/xgamemp/zh-movie-play.png') no-repeat center / 100% 100%;
+}
+
+#root #banner .movie .movie-icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background: url('../img/xgamemp/zh-movie-index-2.png') no-repeat center / 100% 100%;
+  animation: goCircel linear 4s infinite;
+}
+
+#root #banner .movie .movie-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background: url('../img/xgamemp/zh-movie-index-1.png') no-repeat center / 100% 100%;
+  animation: unCircel linear 4s infinite;
+}
+
+@keyframes goCircel{
+  0%{
+      transform: rotate(0deg)
+  }
+  100%{
+      transform: rotate(360deg)
+  }
+}
+
+@keyframes unCircel{
+  0%{
+      transform:rotate(360deg)
+  }
+  100%{
+      transform:rotate(0deg)
+  }
+}
+
+#root #banner .banner-spine {
+  height: 12.83rem;
+}
+
+#movie .movie-content {
+  position: fixed;
+  overflow: hidden;
+  top: 30%;
+  z-index: 9998;
+  width: 100%;
+  height: 3.8rem;
+  background: black;
+}
+
+#movie video {
+  width: 1px;
+  height: 1px;
+
+}
+
+#movie .movie-play {
+  position: fixed;
+  left: 25px;
+  /*top: 4.9rem;*/
+}
+
+#movie .movie-delete {
+  background: url("../img/xgamemp/ui_zbsq_0083.png") no-repeat right / 100% 100%;
+  position: fixed;
+  z-index: 9999;
+  overflow: hidden;
+  top: 30%;
+  height: .5rem;
+  width: .5rem;
+  right: 0px;
+}
+
+.root-filter {
+  filter: blur(2px);
+}
+
+/**
+横屏
+ */
+@media all and (orientation: landscape) {
+  #root .head-right {
+    background: url("../img/xgamemp/ui_yxz_ysb_0026.png") no-repeat center / 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 100%;
+    top: 57px;
+    background-size: cover;
+  }
+
+  /*.audio-btn img{*/
+  /*    position: fixed;*/
+  /*    width: 30px;*/
+  /*    height: 30px;*/
+  /*    z-index: 1;*/
+  /*    left: 80%;*/
+  /*    top: 75px;*/
+  /*}*/
+
+  .navigation-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    left: 85%;
+    top: -0.92rem;
+  }
+}
+
+@keyframes rotateImg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.audio-btn .active {
+  animation-play-state: paused;
+}
+
+.audio-btn img {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  z-index: 999;
+  left: 84%;
+  top: 75px;
+  animation: rotateImg 10s linear infinite;
+}
+
+
+/**
+竖屏
+ */
+@media all and (orientation: portrait) {
+  #root .head-right {
+    background: url("../img/xgamemp/ui_yxz_ysb_0026.png");
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 210px;
+    top: 57px;
+    background-size: cover;
+    left: 100%;
+  }
+
+  .navigation-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    left: 85%;
+    top: -0.92rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #root .section-video .video-swiper-container {
+    top: 230px;
+  }
+
+  /* #root #video .title {
+    top: 230px;
+  } */
+
+  .navigation-btn {
+    left: 88%;
+  }
+}
+
+/**
+390 pro
+ */
+@media (max-width: 390px) and (min-width: 361px) {
+  /* #root .section-video .video-swiper-container {
+    top: 250px;
+  } */
+}
+
+@media (max-width: 400px) {
+  /* #root .section-video .video-swiper-container .swiper-wrapper .swiper-slide .layout .bg {
+    top: 60%;
+  } */
+}
+
+/**
+plus
+ */
+@media (min-width: 414px) {
+  /* #root .section-video .video-swiper-container {
+    top: 270px;
+  } */
+
+  /* #root .section-video .video-swiper-container .swiper-wrapper .swiper-slide .layout .bg {
+    top: 58%;
+    left: 50.6%;
+  } */
+
+  .section-top-banner a {
+    left: 58%;
+  }
+
+  .section-top-banner a:active {
+    left: 58%;
+  }
+}
+
+/**
+ipad
+ */
+@media (min-width: 500px) {
+  /* #root #form .form-bonus-dating-one img:nth-child(3) {
+    top: -125px;
+  } */
+
+  /* #root #form .form-bonus-dating-three img:nth-child(2) {
+    top: -3rem;
+  } */
+
+  #root .section-form {
+    height: 18rem;
+  }
+
+  /* #banner .bonus-tips span {
+    top: 14.5rem;
+    left: 82px;
+  } */
+
+  /* #root .section-video .video-swiper-container {
+    top: 28.7%;
+  } */
+
+  /* #root .section-video .video-swiper-container .swiper-wrapper .swiper-slide .layout .bg {
+    top: 58%;
+    left: 47.5%;
+  } */
+
+  .section-top-banner a {
+    left: 68%;
+  }
+
+  .navigation-btn {
+    top: -0.89rem;
+  }
+
+  #root #video .title {
+    top: 28%;
+    left: 30px;
+  }
+
+  /* #root .game-news {
+    height: 400px;
+    line-height: 40px;
+  } */
+
+  /* #root .game-news .news-content ul li {
+    line-height: 42px;
+  } */
+
+  /* #root #role .footer-notice .notice-content {
+    left: 80px;
+    top: 160px;
+  } */
+
+  /* #root #role .footer-notice span {
+    top: 86px;
+    left: 60px;
+  } */
+
+  /* #root #role .footer-notice .notice {
+    left: 130px;
+    top: 103px;
+  } */
+}
+
+
+
+/** {*/
+/*    background: #000 !important;*/
+/*    color: #0f0 !important;*/
+/*    outline: solid #f00 1px !important;*/
+/*}*/

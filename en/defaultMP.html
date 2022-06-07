@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="魔武紀元,放置,AFK,掛機,休閒,PS5,RPG,卡牌">
+    <title>预注册</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="./css/stylemp.min.css?v=0324001">
+    <link rel="stylesheet" href="./css/xgame_mp.css?v=0324001">
+    <script>
+        // 活动的开始与结束 true 开始 false 结束
+        window.activityOn = true;
+
+        // 活动进度 0 1 2 3 4
+        // 0为全都不亮 5为全亮 以此类推
+        window.activityProgress = 5;
+
+        // Facebook链接
+        window.facebookLink = "https://www.facebook.com/groups/266320748292972";
+
+        // 设置rem
+        function setRem() {
+            let deviceWidth = document.documentElement.clientWidth
+            if (deviceWidth > 750) deviceWidth = 750
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px'
+        }
+        setRem()
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '453981955829064');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=453981955829064&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+    <div id="root" style="overflow:hidden;">
+        <!--顶部导航 start-->
+        <div class="section-top-banner">
+            <span></span>
+            <p>Summoners Kingdom</p>
+            <p>Nurturance fair play hand tour</p>
+            <a href="#store-btn" class="dating"></a>
+            <img class="navigation-btn" src="../img/xgamemp/ui_yxz_ysb_0004.png">
+        </div>
+
+        <!-- 顶部导航 end -->
+
+        <div id="banner" class="section section-banner">
+            <div class="movie">
+                <span class="movie-icon" id="movie-icon"></span>
+            </div>
+            <p>xx月xx日正式开启召唤</p>
+            <div class="store-btn" id="store-btn">
+                <a href="https://apps.apple.com/us/app/id1605703005"><img src="img/xgamemp/ui_yxz_0010_en.png"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.summoners.kingdom"><img src="img/xgamemp/ui_yxz_0008_en.png"></a>
+                <a href="https://www.facebook.com/SummonersGAME"><img src="img/xgamemp/ui_yxz_0006_en.png"></a>
+            </div>
+            <div class="bonus-tips">
+                <span></span>
+            </div>
+        </div>
+        <div id="form" class="section section-form">
+            <form action="" id="form">
+                <div class="form" style="position: relative;top: -120px;">
+                    <div class="form-content">
+                        <div class="form-step">
+                            <img src="../img/xgamemp/ui_yxz_ysb_0054.png">
+                        </div>
+                        <!-- 手机号输入框 -->
+                        <div class="form-phone-group cf">
+                            <div class="secect-btn J-secect-btn">
+                                <span class="select-value J-select-value" style="color: yellow">Taiwan +886</span>
+                                <select name="area" id="" class="select-value-hide">
+                                    <option value="">select area</option>
+                                    <option value="+886">Taiwan +886</option>
+                                    <option value="+65">Singapore +65</option>
+                                    <option value="+60">Malaysia +60</option>
+                                    <option value="+61">Australia +61</option>
+                                    <option value="+44">UK +44</option>
+                                </select>
+                                <i class="select-icon"></i>
+                            </div>
+                            <div class="phone-input">
+                                <input type="tel" name="phone" placeholder="Enter phone number">
+                            </div>
+                            <!-- <div class="select-option-list J-select-option-list">
+                                <div class="list" data-value="1">台灣 +886</div>
+                                <div class="list" data-value="2">香港 +852</div>
+                                <div class="list" data-value="3">澳門 +853</div>
+                                <div class="list" data-value="4">新加坡 +65</div>
+                                <div class="list" data-value="5">馬來西亞 +60</div>
+                            </div> -->
+                        </div>
+                        <!-- 验证码输入框 -->
+                        <div class="form-code-group">
+                            <div class="code-input">
+                                <input name="code" type="tel" placeholder="Enter the code">
+                            </div>
+                            <button type="button" class="code-btn J-code-btn"></button>
+                        </div>
+                        <div class="form-submit-btn">
+                            <button type="button" class="submit-btn J-submit-btn"></button>
+                        </div>
+                        <div class="form-step" style="position: relative;top: -.2rem;left: 22px">
+                            <img src="../img/xgamemp/ui_yxz_ysb_0055.png">
+                        </div>
+                        <div class="form-facebook J-form-facebook"><a href="#" target="_blank" style="top: -0.4rem;position: relative;left: 21px;"></a></div>
+                        <div class="form-bounus-tips">
+                            <img src="img/xgamemp/ui_yxz_ysb_0056.png">
+                            <img src="img/xgamemp/copy.png">
+                        </div>
+                        <div class="form-bonus-dating-one" id="form-bonus-dataing">
+                            <img src="img/xgamemp/ui_yxz_ysb_0047.png">
+                            <img src="img/xgamemp/ui_yxz_ysb_0052.png">
+                            <img src="img/xgamemp/ui_yxz_ysb_0048.png">
+                        </div>
+                        <div class="form-bonus-dating-two">
+                            <img src="img/xgamemp/ui_yxz_ysb_0051.png">
+                            <img src="img/xgamemp/ui_yxz_ysb_0048.png">
+                        </div>
+                        <div class="form-bonus-dating-three">
+                            <img src="img/xgamemp/ui_yxz_ysb_0050.png">
+                            <img src="img/xgamemp/ui_yxz_ysb_0048.png">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="video" class="section section-video">
+            <div class="form-bonus-dating-four">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="title" style="top: 250px"></div>
+            <div class="video-border-pic">
+                <img src="img/xgamemp/ui_yxz_ysb_0045.png">
+            </div>
+            <div class="swiper-container video-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="mark"></div>
+                            <div class="bg bg-1"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="mark"></div>
+                            <div class="bg bg-2"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="mark"></div>
+                            <div class="bg bg-3"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="mark"></div>
+                            <div class="bg bg-4"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="mark"></div>
+                            <div class="bg bg-5"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                -->
+            </div>
+
+            <!-- 新闻列表 start-->
+            <div class="game-news">
+                <div class="news-title">
+                    <ul>
+                        <li data-index="1" style="color: yellow">Newest</li>
+                        <li data-index="2">Hero</li>
+                        <li data-index="3">Activity</li>
+                        <li data-index="4">Strategy</li>
+                    </ul>
+                </div>
+                <div class="news-border"></div>
+                <div class="news-content">
+                    <div class="news-content-detail" id="news-list-one">
+                        <ul>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">The son of God comes ？！</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">Eight virtues inheritance ？！</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">A Midsummer Night's Dream？！</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">Galloping female hunter？！</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news-content-detail" id="news-list-two" style="display: none">
+                        <ul>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">Wolf of grassland？！</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">A fearsome witch？！</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">Goddess of wisdom and war？！</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/SummonersGAME" target="_blank">The wind blademaster？！</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news-content-detail" id="news-list-three" style="display: none">
+                        <ul>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">Lucky Draw with Blessings</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">Monthly benefit redemption code to receive</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news-content-detail" id="news-list-four" style="display: none">
+                        <ul>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">Best lineup recommendation</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">Recommended favorite warrior hero</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">recommended collection</a>
+                            </li>
+                            <li>
+                                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">The battle of light and dark</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 新闻列表 end-->
+
+            <!--商店下载-->
+            <div class="store-btn" style="top: 90%">
+                <a href="https://apps.apple.com/us/app/id1605703005"><img src="img/xgamemp/ui_yxz_ysb_0011.png"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.summoners.kingdom"><img src="img/xgamemp/ui_yxz_ysb_0009.png"></a>
+                <a href="https://www.facebook.com/SummonersGAME"><img src="img/xgamemp/ui_yxz_ysb_0007.png"></a>
+            </div>
+        </div>
+        <!--英雄展示-->
+        <div id="role" class="section section-role">
+            <div class="title">
+                <span style="position: relative;top: -60px"></span>
+            </div>
+            <div class="swiper-container role-swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- 角色1 -->
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="role-detail cf">
+                                <div class="name">
+                                    <img src="./img/mp/name-1.png" alt="">
+                                </div>
+                                <div class="skill-list">
+                                    <img src="./img/mp/skill-1.png" alt="" class="skill-img">
+                                    <img src="./img/mp/skill-2.png" alt="" class="skill-img">
+                                </div>
+                                <div class="gif-wrap trans">
+                                    <div class="gif-step step-1"></div>
+                                </div>
+                            </div>
+                            <img src="./img/mp/role-slide-1.png" class="role-img" alt="">
+                        </div>
+                    </div>
+                    <!-- 角色2 -->
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="role-detail cf">
+                                <div class="name">
+                                    <img src="./img/mp/name-2.png" alt="">
+                                </div>
+                                <div class="skill-list">
+                                    <img src="./img/mp/skill-3.png" alt="" class="skill-img">
+                                    <img src="./img/mp/skill-4.png" alt="" class="skill-img">
+                                </div>
+                                <div class="gif-wrap">
+                                    <div class="gif-step step-2"></div>
+
+                                </div>
+                            </div>
+                            <img src="./img/mp/role-slide-2.png" class="role-img" alt="">
+                        </div>
+                    </div>
+                    <!-- 角色3 -->
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="role-detail cf">
+                                <div class="name">
+                                    <img src="./img/mp/name-3.png" alt="">
+                                </div>
+                                <div class="skill-list">
+                                    <img src="./img/mp/skill-3.png" alt="" class="skill-img">
+                                    <img src="./img/mp/skill-2.png" alt="" class="skill-img">
+                                </div>
+                                <div class="gif-wrap">
+                                    <div class="gif-step step-3"></div>
+
+                                </div>
+                            </div>
+                            <img src="./img/mp/role-slide-3.png" class="role-img" alt="">
+                        </div>
+                    </div>
+                    <!-- 角色4 -->
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="role-detail cf">
+                                <div class="name">
+                                    <img src="./img/mp/name-4.png" alt="">
+                                </div>
+                                <div class="skill-list">
+                                    <img src="./img/mp/skill-8.png" alt="" class="skill-img">
+                                    <img src="./img/mp/skill-9.png" alt="" class="skill-img">
+                                </div>
+                                <div class="gif-wrap trans">
+                                    <div class="gif-step step-4"></div>
+                                </div>
+                            </div>
+                            <img src="./img/mp/role-slide-4.png" class="role-img role-4" alt="">
+                        </div>
+                    </div>
+                    <!-- 角色5 -->
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="role-detail cf">
+                                <div class="name">
+                                    <img src="./img/mp/name-5.png" alt="">
+                                </div>
+                                <div class="skill-list">
+                                    <img src="./img/mp/skill-10.png" alt="" class="skill-img">
+                                    <img src="./img/mp/skill-9.png" alt="" class="skill-img">
+                                </div>
+                                <div class="gif-wrap">
+                                    <div class="gif-step step-5"></div>
+
+                                </div>
+                            </div>
+                            <img src="./img/mp/role-slide-5.png" class="role-img role-5" alt="">
+                        </div>
+                    </div>
+                    <!-- 角色6 -->
+                    <div class="swiper-slide cf">
+                        <div class="layout">
+                            <div class="role-detail cf">
+                                <div class="name">
+                                    <img src="./img/mp/name-5.png" alt="">
+                                </div>
+                                <div class="skill-list">
+                                    <img src="./img/mp/skill-10.png" alt="" class="skill-img">
+                                    <img src="./img/mp/skill-9.png" alt="" class="skill-img">
+                                </div>
+                                <div class="gif-wrap">
+                                    <div class="gif-step step-6"></div>
+                                </div>
+                            </div>
+                            <img src="./img/mp/role-slide-5.png" class="role-img role-6" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="footer-notice" id="footer-notice">
+                <span></span><p class="notice">Announcements</p>
+                <div class="notice-content">
+                    <p>1、Activity Time: 2020/06 / XX / - Before the official launch of the game.</p>
+                    <p>2、Players who participate in the subscribe should receive the milestone reward through the game letter within x days after the game is launched. If overdue, they will can not get the reward of this activity.</p>
+                    <p>3、Please redeem the package code before December 1, 2022, after you will not be able to redeem.</p>
+                    <p>4、Please refer to the page for details.</p>
+                    <p>5、If users cheat or use other abnormal ways to participate,the authorities have the right to cancel the user's participation in the exchange.</p>
+                    <p>6、The SK XXXXX operation team reserves the right to modify and interpret the event.</p>
+                </div>
+            </div>
+            <div class="dataing-icon" style="position: absolute">
+                <a href="#store-btn"></a>
+            </div>
+            <div class="slide-icon-one">
+                <img src="img/xgamemp/ui_yxz_ysb_0027.png" style="margin-top: -75px">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank"></a>
+            </div>
+        </div>
+
+        <!-- 顶部导航区域 start -->
+        <div id="menu" class="head-right">
+            <div class="ul">
+                <a href="#banner" class="">Home page</a>
+                <a href="#store-btn" class="">Subscribe</a>
+                <a href="#form-bonus-dataing" class="">Subscribe reward</a>
+                <a href="#video" class="">Game introduction</a>
+                <a href="#footer-notice" class="">Notes</a>
+            </div>
+        </div>
+        <!-- 顶部导航区域 end-->
+
+        <!--音乐播放 start -->
+        <div class="audio-btn">
+            <img src="../img/xgamemp/ui_yxz_ysb_0016.png" class="music-play">
+        </div>
+        <audio preload id="myMusic" loop>
+            <source src="img/xgamemp/bgm_niudan.wav" type="audio/mpeg">
+        </audio>
+        <!--音乐播放 end-->
+        <!-- 活动结束弹窗 -->
+        <div class="dialog dialog-is-over J-dialog">
+            <div class="content">
+                <div class="dialog-close J-dialog-close"></div>
+                <div class="link-btn-group">
+                    <a href="https://apps.apple.com/app/id1516616629" class="link-btn ios"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.luxgames.lux" class="link-btn an"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 关于表单的自定义弹窗 -->
+        <div class="dialog dialog-phone J-dialog">
+            <div class="content">
+                <p class="dialog-phone-text J-dialog-phone-text">The entered mobile number/verification code is incorrect！</p>
+                <div class="dialog-phone-btn J-dialog-close">
+                    <span>Confirm</span>
+                </div>
+            </div>
+        </div>
+        <div class="go-top J-go-top"></div>
+    </div>
+    <div id="movie">
+        <div class="movie-content" style="display: none" id="movie-content">
+            <div class="movie-delete" style="display: none"></div>
+            <video preload="auto" loop="loop" controls="controls" class="movie-play">
+                <source src="img/xgamemp/movie.mp4" type="video/mp4">
+                <source src="https://youtu.be/7rL3VbF8ZRE" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="./js/main-mp.js?v=0324001"></script>
+    <script src="./js/xgame_mp.js?v=0324001"></script>
+</body>
+
+</html>

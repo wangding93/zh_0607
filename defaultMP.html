@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="keywords" content="魔武紀元,放置,AFK,掛機,休閒,PS5,RPG,卡牌">
+  <title>预注册</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
+  <link rel="stylesheet" href="./css/stylemp.min.css?v=2022060502">
+  <link rel="stylesheet" href="./css/xgame_mp.css?v=2022060502">
+
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <script>
+    // 活动的开始与结束 true 开始 false 结束
+    window.activityOn = true;
+
+    // 活动进度 0 1 2 3 4
+    // 0为全都不亮 5为全亮 以此类推
+    // window.activityProgress = 5;
+
+    // Facebook链接
+    window.facebookLink = "https://www.facebook.com/groups/266320748292972";
+
+    // 设置rem
+    function setRem() {
+      let deviceWidth = document.documentElement.clientWidth
+      if (deviceWidth > 750) deviceWidth = 750
+      document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px'
+    }
+    setRem()
+  </script>
+  <!-- Facebook Pixel Code -->
+  <!-- <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '453981955829064');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=453981955829064&ev=PageView&noscript=1" /></noscript> -->
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+  <div id="root" style="overflow:hidden;">
+    <!--顶部导航 start-->
+    <div class="section-top-banner">
+      <span></span>
+      <p>召唤师王国</p>
+      <p>养成系公平对战手游</p>
+      <a href="#store-btn" class="dating"></a>
+      <img class="navigation-btn" src="./img/xgamemp/ui_yxz_ysb_0004.png">
+    </div>
+
+    <!-- 顶部导航 end -->
+    <div id="banner" class="section section-banner">
+      <div class="banner-spine">
+        <div class="movie">
+          <span class="movie-icon" id="movie-icon"></span>
+        </div>
+      </div>
+      <p>xx月xx日正式开启召唤</p>
+      <div class="store-btn" id="store-btn">
+        <a href="https://apps.apple.com/us/app/id1605703005"><img src="img/xgamemp/ui_yxz_ysb_0011.png"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.summoners.kingdom"><img
+            src="img/xgamemp/ui_yxz_ysb_0009.png"></a>
+        <a href="https://www.facebook.com/SummonersGAME"><img src="img/xgamemp/ui_yxz_ysb_0007.png"></a>
+      </div>
+      <div class="bonus-tips"></div>
+    </div>
+    <div id="form" class="section section-form">
+      <form action="" id="form">
+        <div class="form">
+          <div class="form-content">
+            <div class="form-step step-1"></div>
+            <!-- 手机号输入框 -->
+            <div class="form-phone-group cf">
+              <div class="secect-btn J-secect-btn">
+                <span class="select-value J-select-value" style="color: #fde872">台湾 +886</span>
+                <select name="area" id="" class="select-value-hide">
+                  <option value="">选择地区</option>
+                  <option value="+886">台湾 +886</option>
+                  <option value="+65">新加坡 +65</option>
+                  <option value="+60">马来西亚 +60</option>
+                  <option value="+61">澳大利亚 +61</option>
+                  <option value="+44">英国 +44</option>
+                </select>
+                <i class="select-icon"></i>
+              </div>
+              <div class="phone-input">
+                <input type="tel" name="phone" placeholder="请输入正确的手机号">
+              </div>
+            </div>
+            <!-- 验证码输入框 -->
+            <div class="form-code-group">
+              <div class="code-input">
+                <input name="code" type="tel" placeholder="请输入验证码">
+              </div>
+              <button type="button" class="code-btn J-code-btn"></button>
+            </div>
+            <div class="form-submit-btn">
+              <button type="button" class="submit-btn J-submit-btn"></button>
+            </div>
+            <div class="form-step step-2"></div>
+            <div class="form-facebook J-form-facebook">
+              <div class="step-fb"></div>
+              <a href="#" target="_blank"></a>
+            </div>
+            <div class="form-bounus-tips">
+              <div class="bounus-tips"></div>
+              <div class="bounus-gift"></div>
+            </div>
+          </div>
+        </div>
+        <div class="form-bonus-dating" id="form-bonus-dataing">
+          <div class="bonus-dating-title"></div>
+          <div class="dating-one">
+            <!-- 是否达成按钮 增加active类名 表示激活 -->
+            <div class="dating-mark active"></div>
+          </div>
+          <!-- 唐吉坷德 激活状态增加active类名 表示激活  -->
+          <div class="dating-two active">
+            <!-- 是否达成按钮 增加active类名 表示激活 -->
+            <div class="dating-mark active"></div>
+          </div>
+          <!-- 白胡子 激活状态增加active类名 表示激活  -->
+          <div class="dating-three active">
+            <!-- 是否达成按钮 增加active类名 表示激活 -->
+            <div class="dating-mark active"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="video" class="section section-video">
+      <div class="form-bonus-dating-four">
+        <!-- 花木兰 激活状态增加active类名 表示激活  -->
+        <div class="dating-four active">
+          <!-- 是否达成按钮 增加active类名 表示激活 -->
+          <div class="dating-mark active"></div>
+        </div>
+      </div>
+      <div class="title"></div>
+      <div class="video-border-pic">
+        <!-- <img src="img/xgamemp/ui_yxz_ysb_0045.png"> -->
+        <div class="swiper-container video-swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide cf">
+              <div class="layout">
+                <!-- <div class="mark"></div> -->
+                <div class="bg bg-1"></div>
+              </div>
+            </div>
+            <div class="swiper-slide cf">
+              <div class="layout">
+                <!-- <div class="mark"></div> -->
+                <div class="bg bg-2"></div>
+              </div>
+            </div>
+            <div class="swiper-slide cf">
+              <div class="layout">
+                <!-- <div class="mark"></div> -->
+                <div class="bg bg-3"></div>
+              </div>
+            </div>
+            <div class="swiper-slide cf">
+              <div class="layout">
+                <!-- <div class="mark"></div> -->
+                <div class="bg bg-4"></div>
+              </div>
+            </div>
+            <div class="swiper-slide cf">
+              <div class="layout">
+                <!-- <div class="mark"></div> -->
+                <div class="bg bg-5"></div>
+              </div>
+            </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+          <!-- 如果需要导航按钮
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          -->
+        </div>
+      </div>
+
+
+      <!-- 新闻列表 start-->
+      <div class="game-news">
+        <div class="news-title">
+          <ul>
+            <li data-index="1" class="active">最新</li>
+            <li data-index="2">英雄</li>
+            <li data-index="3">活动</li>
+            <li data-index="4">攻略</li>
+          </ul>
+        </div>
+        <div class="news-content">
+          <div class="news-content-detail" id="news-list-one">
+            <ul>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">圣子降临？！</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">八美德的传承？！</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">仲夏夜之梦？！</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">疾走的女猎手</a>
+              </li>
+            </ul>
+          </div>
+          <div class="news-content-detail" id="news-list-two" style="display: none">
+            <ul>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">草原之苍狼？！</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">令人畏惧的女巫？！</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">智慧与战争女神？！</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/SummonersGAME" target="_blank">疾风剑圣？！</a>
+              </li>
+            </ul>
+          </div>
+          <div class="news-content-detail" id="news-list-three" style="display: none">
+            <ul>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">祝福语之幸运抽奖</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">每月福利兑换码领取</a>
+              </li>
+            </ul>
+          </div>
+          <div class="news-content-detail" id="news-list-four" style="display: none">
+            <ul>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">最佳阵容推荐</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">推荐最爱的战士英雄</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">版本更新建议大收集</a>
+              </li>
+              <li>
+                <img src="img/xgamemp/ui_yxz_ysb_0041.png">
+                <a href="https://www.facebook.com/groups/397634788706725" target="_blank">光与暗的较量</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 新闻列表 end-->
+
+      <!--商店下载-->
+      <div class="store-btn">
+        <a href="https://apps.apple.com/us/app/id1605703005"><img src="img/xgamemp/ui_yxz_ysb_0011.png"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.summoners.kingdom"><img
+            src="img/xgamemp/ui_yxz_ysb_0009.png"></a>
+        <a href="https://www.facebook.com/SummonersGAME"><img src="img/xgamemp/ui_yxz_ysb_0007.png"></a>
+      </div>
+    </div>
+    <div id="role" class="section section-role">
+      <!-- 英雄展示 -->
+      <div class="title">
+        <span></span>
+      </div>
+      <div class="swiper-container role-swiper-container">
+        <div class="swiper-wrapper">
+          <!-- 角色1 -->
+          <div class="swiper-slide cf">
+            <div class="layout">
+              <div class="role-detail cf">
+                <div class="gif-wrap trans">
+                  <div class="gif-step step-1"></div>
+                </div>
+              </div>
+              <img src="./img/xgamemp/zh-role-name-1.png" class="role-name" alt="">
+              <img src="./img/xgamemp/zh-role-slider-01.png" class="role-img" alt="">
+            </div>
+          </div>
+          <!-- 角色2 -->
+          <div class="swiper-slide cf">
+            <div class="layout">
+              <div class="role-detail cf">
+                <div class="gif-wrap trans">
+                  <div class="gif-step step-2"></div>
+                </div>
+              </div>
+              <img src="./img/xgamemp/zh-role-name-2.png" class="role-name" alt="">
+              <img src="./img/xgamemp/zh-role-slider-02.png" class="role-img" alt="">
+            </div>
+          </div>
+          <!-- 角色3 -->
+          <div class="swiper-slide cf" style="overflow: unset;">
+            <div class="layout">
+              <div class="role-detail cf">
+                <div class="gif-wrap trans">
+                  <div class="gif-step step-3"></div>
+                </div>
+              </div>
+              <img src="./img/xgamemp/zh-role-name-3.png" class="role-name" alt="">
+              <img src="./img/xgamemp/zh-role-slider-03.png" class="role-img" alt="" style="max-width: 11rem;max-height: 11rem;">
+            </div>
+          </div>
+          <!-- 角色4 -->
+          <div class="swiper-slide cf">
+            <div class="layout">
+              <div class="role-detail cf">
+                <div class="gif-wrap trans">
+                  <div class="gif-step step-4"></div>
+                </div>
+              </div>
+              <img src="./img/xgamemp/zh-role-name-4.png" class="role-name" alt="">
+              <img src="./img/xgamemp/zh-role-slider-04.png" class="role-img" alt="" style="max-height: 7rem;">
+            </div>
+          </div>
+          <!-- 角色5 -->
+          <div class="swiper-slide cf">
+            <div class="layout">
+              <div class="role-detail cf">
+                <div class="gif-wrap trans">
+                  <div class="gif-step step-5"></div>
+                </div>
+              </div>
+              <img src="./img/xgamemp/zh-role-name-5.png" class="role-name" alt="">
+              <img src="./img/xgamemp/zh-role-slider-05.png" class="role-img" alt="">
+            </div>
+          </div>
+          <!-- 角色6 -->
+          <div class="swiper-slide cf">
+            <div class="layout">
+              <div class="role-detail cf">
+                <div class="gif-wrap trans">
+                  <div class="gif-step step-6"></div>
+                </div>
+              </div>
+              <img src="./img/xgamemp/zh-role-name-6.png" class="role-name" alt="">
+              <img src="./img/xgamemp/zh-role-slider-06.png" class="role-img" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="footer-notice" id="footer-notice">
+        <p class="notice"><span></span>注意事项</p>
+        <div class="notice-content">
+          <p>1、活动时间：2022/06/xx/ - 游戏正式上线前。</p>
+          <p>2、参与预约的玩家，需在游戏上线起x日内透过游戏信件件领取预约里程碑奖励，逾期将无法获得本活动奖励。</p>
+          <p>3、本活动中的礼包码请于2022年12月1日前兑换，过期将无法兑换并不予补发。</p>
+          <p>4、活动详见页面活动详情。</p>
+          <p>5、如使用外挂等不正常方式参与本活动，官方将有权取消用户参与及兑换资格。</p>
+          <p>6、《sk xxxxx》营运团队保留对活动的修改权和最终解释权。</p>
+        </div>
+      </div>
+      <div class="dataing-icon">
+        <a href="#store-btn"></a>
+      </div>
+      <!-- <div class="step-xl"></div> -->
+    </div>
+    <!-- 左侧按钮 -->
+    <div class="slide-icon-one">
+      <a href="https://www.facebook.com/SummonersGAME" target="_blank" class="link-btn-hml"></a>
+      <a href="https://www.facebook.com/SummonersGAME" target="_blank" class="link-btn-fb">
+        <div class="step-fb-btn"></div>
+      </a>
+    </div>
+    <!-- 顶部导航区域 start -->
+    <div id="menu" class="head-right">
+      <div class="ul">
+        <a href="#banner" class="">首页</a>
+        <a href="#store-btn" class="">马上预约</a>
+        <a href="#form-bonus-dataing" class="">预约奖励</a>
+        <a href="#video" class="">游戏介绍</a>
+        <a href="#footer-notice" class="">注意事项</a>
+      </div>
+    </div>
+    <!-- 顶部导航区域 end-->
+
+    <!--音乐播放 start -->
+    <div class="audio-btn">
+      <img src="img/xgamemp/ui_yxz_ysb_0015.png" class="music-play">
+    </div>
+    <audio id="myMusic" loop="loop" autoplay="autoplay">
+      <source src="img/xgamemp/bgm_niudan.wav" type="audio/mpeg">
+    </audio>
+    <!--音乐播放 end-->
+    <!-- 活动结束弹窗 -->
+    <div class="dialog dialog-is-over J-dialog">
+      <div class="content">
+        <div class="dialog-close J-dialog-close"></div>
+        <div class="link-btn-group">
+          <a href="https://apps.apple.com/app/id1516616629" class="link-btn ios"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.luxgames.lux" class="link-btn an"></a>
+        </div>
+      </div>
+    </div>
+    <!-- 关于表单的自定义弹窗 -->
+    <div class="dialog dialog-phone J-dialog">
+      <div class="content">
+        <p class="dialog-phone-text J-dialog-phone-text">输入的手机号码/验证码不正确！</p>
+        <div class="dialog-phone-btn J-dialog-close">
+          <span>确定</span>
+        </div>
+      </div>
+    </div>
+    <div class="go-top J-go-top"></div>
+  </div>
+  <div id="movie">
+    <div class="movie-content" style="display: none" id="movie-content">
+      <div class="movie-delete" style="display: none"></div>
+      <video preload="auto" loop="loop" controls="controls" class="movie-play">
+        <source src="img/xgamemp/movie.mp4" type="video/mp4">
+        <source src="https://youtu.be/7rL3VbF8ZRE" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/swiper-3.4.2.jquery.min.js"></script>
+  <script src="./js/main-mp.js?v=2022060502"></script>
+  <script src="./js/xgame_mp.js?v=2022060502"></script>
+</body>
+
+</html>
