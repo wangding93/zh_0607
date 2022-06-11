@@ -20,7 +20,7 @@
 
   </script>
   <!-- Facebook Pixel Code -->
-  <script>
+  <!-- <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
@@ -36,25 +36,27 @@
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=453981955829064&ev=PageView&noscript=1" /></noscript>
+      src="https://www.facebook.com/tr?id=453981955829064&ev=PageView&noscript=1" /></noscript> -->
   <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
   <!--顶部导航 start-->
   <div class="section-top-banner">
-    <div class="top-banner-content">
-      <div class="left">
-        <div class="game-icon"></div>
-        <p class="game-name">召唤师王国</p>
-        <p class="game-name-sub">养成系公平对战手游</p>
-      </div>
-      <div class="right">
-        <a href="#store-btn" class="top-btn"></a>
-      </div>
+    <div class="banner-btn-group">
+      <a href="#" class="btn sy">首页</a>
+      <a href="" class="btn ms">马上预约</a>
+      <a href="" class="btn yx">游戏介绍</a>
+      <a href="" class="btn jl">奖励查询</a>
     </div>
   </div>
-
+  <!-- 定位背景图 -->
+  <div id="position-background">
+    <div class="background background-1"></div>
+    <div class="background background-2"></div>
+    <div class="background background-3"></div>
+    <div class="background background-4"></div>
+  </div>
   <!-- 顶部导航 end -->
   <div id="root" style="overflow:hidden;">
     <div id="banner" class="section section-banner">
@@ -62,17 +64,27 @@
         <div class="movie">
           <span class="movie-icon" id="movie-icon"></span>
         </div>
-      </div>
-      <!-- <p>xx月xx日正式开启召唤</p> -->
-      <div class="store-btn" id="store-btn">
-        <a class="link-btn apple" href="https://apps.apple.com/us/app/id1605703005" target="_blank"></a>
-        <a class="link-btn google" href="https://play.google.com/store/apps/details?id=com.summoners.kingdom"
-          target="_blank"></a>
-        <a class="link-btn fb" href="https://www.facebook.com/SummonersGAME" target="_blank"></a>
+        <div class="spine-mark"></div>
+        <div class="spine-detail-group">
+          <!-- 几月几日开始 -->
+          <p class="spine-yy-date">
+            xx月xx日正式开启召唤
+          </p>
+          <!-- 立即预约 -->
+          <a class="spine-go-to-yy" href=""></a>
+          <!-- 下载按钮 -->
+          <div class="store-btn" id="store-btn">
+            <a class="link-btn apple" href="https://apps.apple.com/us/app/id1605703005" target="_blank"></a>
+            <a class="link-btn google" href="https://play.google.com/store/apps/details?id=com.summoners.kingdom"
+              target="_blank"></a>
+            <a class="link-btn fb" href="https://www.facebook.com/SummonersGAME" target="_blank"></a>
+          </div>
+          <div class="from-title"></div>
+        </div>
       </div>
     </div>
+
     <div id="form" class="section section-form">
-      <div class="from-title"></div>
       <form action="" id="form">
         <div class="form">
           <div class="form-content">
@@ -132,11 +144,11 @@
 
     <div id="gift" class="section section-gift">
       <div class="gift-title"></div>
-      <div class="sec-gift-01">
-        <!-- 是否达成按钮 增加active类名 表示激活 -->
-        <div class="dating-mark active"></div>
-      </div>
       <div class="sec-gift-group">
+        <div class="sec-gift-01">
+          <!-- 是否达成按钮 增加active类名 表示激活 -->
+          <div class="dating-mark active"></div>
+        </div>
         <!-- 唐吉坷德 激活状态增加active类名 表示激活  -->
         <div class="sec-gift-02 active">
           <!-- 是否达成按钮 增加active类名 表示激活 -->
@@ -156,6 +168,7 @@
         <div class="dating-mark active"></div>
       </div>
     </div>
+
     <!-- 新闻部分 -->
     <div id="news" class="section section-news">
       <div class="news-title"></div>
@@ -208,20 +221,20 @@
           </div>
         </div>
       </div>
-      <div class="role-title"></div>
     </div>
     <!--英雄展示-->
     <div id="role" class="section section-role">
+      <div class="role-title"></div>
       <div id="role-swiper-container" class="swiper-container role-swiper-container">
         <div class="swiper-wrapper">
           <!-- 角色1 -->
           <div class="swiper-slide swiper-slide-1 cf">
             <div class="layout">
-              <div class="gif-wrap trans">
+              <div class="gif-wrap">
                 <div class="gif-step step-1"></div>
               </div>
               <img src="./img/xgamepc/zh-role-name-1.png" class="role-name" alt="">
-              <img src="./img/xgamepc/zh-role-slider-01.png" class="role-img" alt="">
+              <img src="./img/xgamepc/zh-role-slider-01.png" class="role-img role-img-1" alt="">
             </div>
           </div>
           <!-- 角色2 -->
@@ -233,7 +246,7 @@
                 </div>
               </div>
               <img src="./img/xgamepc/zh-role-name-2.png" class="role-name" alt="">
-              <img src="./img/xgamepc/zh-role-slider-02.png" class="role-img" alt="">
+              <img src="./img/xgamepc/zh-role-slider-02.png" class="role-img role-img-2" alt="">
             </div>
           </div>
           <!-- 角色3 -->
@@ -245,7 +258,7 @@
                 </div>
               </div>
               <img src="./img/xgamepc/zh-role-name-3.png" class="role-name" alt="">
-              <img src="./img/xgamepc/zh-role-slider-03.png" class="role-img" alt="">
+              <img src="./img/xgamepc/zh-role-slider-03.png" class="role-img role-img-3" alt="">
             </div>
           </div>
           <!-- 角色4 -->
@@ -257,7 +270,7 @@
                 </div>
               </div>
               <img src="./img/xgamepc/zh-role-name-4.png" class="role-name" alt="">
-              <img src="./img/xgamepc/zh-role-slider-04.png" class="role-img" alt="">
+              <img src="./img/xgamepc/zh-role-slider-04.png" class="role-img role-img-4" alt="">
             </div>
           </div>
           <!-- 角色5 -->
@@ -269,7 +282,7 @@
                 </div>
               </div>
               <img src="./img/xgamepc/zh-role-name-5.png" class="role-name" alt="">
-              <img src="./img/xgamepc/zh-role-slider-05.png" class="role-img" alt="">
+              <img src="./img/xgamepc/zh-role-slider-05.png" class="role-img role-img-5" alt="">
             </div>
           </div>
           <!-- 角色6 -->
@@ -281,7 +294,7 @@
                 </div>
               </div>
               <img src="./img/xgamepc/zh-role-name-6.png" class="role-name" alt="">
-              <img src="./img/xgamepc/zh-role-slider-06.png" class="role-img" alt="">
+              <img src="./img/xgamepc/zh-role-slider-06.png" class="role-img role-img-6" alt="">
             </div>
           </div>
         </div>

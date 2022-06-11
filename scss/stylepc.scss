@@ -13,56 +13,76 @@ body {
   width: 100%;
   height: 60px;
   z-index: 99;
-  background: rgba($color: #000, $alpha: .6);
+  background: rgba($color: #000, $alpha: .8);
 
-  .top-banner-content {
-    box-sizing: border-box;
-    width: 1080px;
-    height: 100%;
-    margin: 0 auto;
+  .banner-btn-group {
     display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
 
-    .left {
-      display: flex;
+    .btn {
+      width: 130px;
+      height: 60px;
+      line-height: 60px;
+      padding-left: 54px;
+      font-size: 20px;
+      color: #fafce0;
+      text-decoration: none;
+      transition: all .3s;
 
+      &.sy {
+        background: url("../img/xgamepc/zh-banner-sy.png") no-repeat 8px 8px / 44px 44px;
+
+        &:hover {
+          text-shadow: 1px 1px 5px #fafce0;
+          background: url("../img/xgamepc/zh-banner-sy-active.png") no-repeat 8px 8px / 44px 44px;
+        }
+      }
+
+      &.ms {
+        background: url("../img/xgamepc/zh-banner-ms.png") no-repeat 8px 8px / 44px 44px;
+
+        &:hover {
+          text-shadow: 1px 1px 5px #fafce0;
+          background: url("../img/xgamepc/zh-banner-ms-active.png") no-repeat 8px 8px / 44px 44px;
+        }
+      }
+
+      &.yx {
+        background: url("../img/xgamepc/zh-banner-yx.png") no-repeat 8px 8px / 44px 44px;
+
+        &:hover {
+          text-shadow: 1px 1px 5px #fafce0;
+          background: url("../img/xgamepc/zh-banner-yx-active.png") no-repeat 8px 8px / 44px 44px;
+        }
+      }
+
+      &.jl {
+        background: url("../img/xgamepc/zh-banner-jl.png") no-repeat 8px 8px / 44px 44px;
+
+        &:hover {
+          text-shadow: 1px 1px 5px #fafce0;
+          background: url("../img/xgamepc/zh-banner-jl-active.png") no-repeat 8px 8px / 44px 44px;
+        }
+      }
     }
+  }
+}
 
-    .game-icon {
-      width: 68px;
-      height: 68px;
-      background: url('../img/xgamepc/zh-game-icon.png') no-repeat center / 100% 100%;
-      margin: 0 16px 0 0;
-    }
+#position-background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 0;
 
-    .game-name {
-      font-size: 18px;
-      color: rgba($color: #fff, $alpha: .6);
-      margin: 0 18px 0 0;
-    }
+  .background {
+    width: 1920px;
+    height: 1500px;
 
-    .game-name-sub {
-      font-size: 14px;
-      color: rgba($color: #fff, $alpha: .6);
-      padding-top: 2px;
-    }
-
-    .right {
-      display: flex;
-      align-items: center;
-    }
-
-    .top-btn {
-      width: 140px;
-      height: 38px;
-      background: transparent;
-      border: 0;
-      outline: 0;
-      background: url('../img/xgamepc/zh-top-btn.png') no-repeat center / 100% 100%;
-
-      &:hover {
-        background: url('../img/xgamepc/zh-top-btn-active.png') no-repeat center / 100% 100%;
+    @for $var from 0 to 5 {
+      &.background-#{$var} {
+        background: url('../img/xgamepc/zh-section-bg-#{$var}.JPG') no-repeat center / 100% 100%;
       }
     }
   }
@@ -70,9 +90,10 @@ body {
 
 #root {
   box-sizing: border-box;
-  width: 1400px;
+  // width: 1400px;
   height: auto;
   margin: 0 auto;
+  z-index: 2;
   // transform: scale(1.37) translate(0,657px);
 
   * {
@@ -80,7 +101,7 @@ body {
   }
 
   .store-btn {
-    width: 800px;
+    width: 596px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -117,63 +138,85 @@ body {
     }
   }
 
-  >.title {
-    position: relative;
-    width: 886px;
-    height: 126px;
-    background: url("../img/pc/title.png") no-repeat center / auto;
-    margin: 0 auto;
-
-    .tips-btn {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background: url("../img/pc/title-dialog-btn.png") no-repeat center / auto;
-      cursor: pointer;
-      right: -150px;
-      top: 13px;
-
-      &:hover {
-        // background: url("../img/pc/title-dialog-btn-active.png") no-repeat center / auto;
-        -webkit-filter: brightness(1.2);
-        filter: brightness(1.2);
-      }
-    }
-  }
-
   .section-banner {
     position: relative;
-    z-index: 5;
-    width: 100%;
-    height: 800px;
-    background: url("../img/xgamepc/zh-section-bg-1.jpg") no-repeat center / 100% 100%;
+    width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    // height: 800px;
+    // background: url("../img/xgamepc/zh-section-bg-1.jpg") no-repeat center / 100% 100%;
 
     .banner-spine {
-      height: 780px;
+      height: 1303px;
+    }
+
+    .spine-mark {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 1920px;
+      height: 874px;
+      background: url("../img/xgamepc/zh-spine-mark.png") no-repeat center / 100% 100%;
+    }
+
+    .spine-detail-group {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 1400px;
+      height: 400px;
+
+      .spine-yy-date {
+        font-size: 36px;
+        background-image: linear-gradient(#fbf5d4, #feed98);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0 0 9px;
+      }
+
+      .spine-go-to-yy {
+        display: block;
+        margin: 0 auto;
+        width: 262px;
+        height: 76px;
+        background: url('../img/xgamepc/zh-top-btn.png') no-repeat center / 100% 100%;
+        margin: 0 auto 25px;
+      }
+
+      .store-btn {
+        margin: 0 auto 33px;
+      }
+
+      .from-title {
+        width: 493px;
+        height: 90px;
+        margin: 0 auto;
+        background: url("../img/xgamepc/zh-from-title-bg.png") no-repeat center / 100% 100%;
+      }
     }
   }
 
   .section-form {
     position: relative;
-    z-index: 4;
-    height: 800px;
-    background: url("../img/xgamepc/zh-section-bg-2.jpg") no-repeat center / auto 100%;
-    padding-top: 50px;
-
-    .from-title {
-      width: 656px;
-      height: 120px;
-      margin: 0 auto;
-      background: url("../img/xgamepc/zh-from-title-bg.png") no-repeat center / auto 100%;
-    }
+    margin: -92px 0 0;
 
     .form {
-      width: 735px;
-      height: 956px;
+      position: relative;
+      left: -148px;
+      width: 1703px;
+      height: 990px;
       background: url("../img/xgamepc/zh-from-content-bg.png") no-repeat center / 100%;
       margin: 0 auto;
 
       .form-content {
+        position: absolute;
+        right: 100px;
         width: 535px;
         height: auto;
         margin: 0 auto;
@@ -182,7 +225,7 @@ body {
         .form-step {
           width: 160px;
           height: 35px;
-          margin: 0 0 16px;
+          margin: 0 0 16px 15px;
 
           &.step-1 {
             background: url("../img/xgamepc/zh-from-steap-1.png") no-repeat center / 100%;
@@ -212,7 +255,7 @@ body {
 
           .secect-btn {
             position: relative;
-            width: 180px;
+            width: 200px;
             height: 100%;
             display: flex;
             align-items: center;
@@ -223,6 +266,7 @@ body {
               font-size: 18px;
               color: #f7e76b;
               padding-left: 18px;
+              flex: 1;
             }
 
             .select-icon {
@@ -243,8 +287,6 @@ body {
           }
 
           .phone-input {
-            flex: 1;
-
             input {
               display: block;
               width: 100%;
@@ -255,7 +297,7 @@ body {
               padding: 0 0 0 20px;
 
               &::placeholder {
-                color: #95877e;
+                color: #fff;
               }
             }
           }
@@ -275,17 +317,21 @@ body {
             .scroll {
               height: 100%;
               overflow-y: auto;
-              &::-webkit-scrollbar{
+
+              &::-webkit-scrollbar {
                 width: 8px;
               }
-              &::-webkit-scrollbar-track{
+
+              &::-webkit-scrollbar-track {
                 width: 10px;
                 background: transparent;
               }
-              &::-webkit-scrollbar-thumb{
-               background: #bbb;
-               border-radius: 4px;
+
+              &::-webkit-scrollbar-thumb {
+                background: #bbb;
+                border-radius: 4px;
               }
+
               .list {
                 width: 274px;
                 height: 50px;
@@ -296,6 +342,7 @@ body {
                 padding: 0 0 0 10px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
                 &:hover {
                   background: url("../img/xgamepc/zh-select-list-bg.png") no-repeat center / 100%;
                 }
@@ -330,7 +377,7 @@ body {
               text-align: center;
 
               &::placeholder {
-                color: #95877e;
+                color: #fff;
               }
             }
           }
@@ -444,8 +491,11 @@ body {
               }
 
               .list-name {
+                font-weight: bold;
                 text-align: center;
                 color: #f7dc0a;
+                font-size: 20px;
+                margin: 2px 0 0;
               }
             }
           }
@@ -456,15 +506,12 @@ body {
 
   .section-gift {
     position: relative;
-    z-index: 3;
-    height: 800px;
-    background: url("../img/xgamepc/zh-section-bg-3.jpg") no-repeat center / 100% 100%;
-    padding: 300px 0 0 0;
+    margin: -18px auto 0;
 
     .gift-title {
       display: block;
-      width: 667px;
-      height: 168px;
+      width: 499px;
+      height: 126px;
       background: url("../img/xgamepc/zh-gift-title.png") no-repeat center / 100% 100%;
       margin: 0 auto;
     }
@@ -478,13 +525,13 @@ body {
     .sec-gift-01 {
       position: relative;
       width: 618px;
-      height: 203px;
+      height: 353px;
       background: url("../img/xgamepc/zh-gift-1.png") no-repeat center / 100% 100%;
-      margin: 0 auto;
+      margin: 76px -20px 0;
 
       .dating-mark {
-        right: 0;
-        top: 30px;
+        right: 155px;
+        top: 125px;
       }
     }
 
@@ -493,10 +540,11 @@ body {
       width: 380px;
       height: 422px;
       background: url("../img/xgamepc/zh-gift-2.png") no-repeat center / 100% 100%;
+      margin: 10px 40px 0;
 
       .dating-mark {
-        left: 0;
-        top: 30%;
+        right: 30px;
+        top: 197px;
       }
 
       &.active {
@@ -511,8 +559,8 @@ body {
       background: url("../img/xgamepc/zh-gift-3.png") no-repeat center / 100% 100%;
 
       .dating-mark {
-        right: 0;
-        top: 30%;
+        right: 35px;
+        top: 206px;
       }
 
       &.active {
@@ -531,10 +579,6 @@ body {
 
   .section-gift-2 {
     position: relative;
-    z-index: 2;
-    height: 800px;
-    background: url("../img/xgamepc/zh-section-bg-4.jpg") no-repeat center / auto 100%;
-    padding: 260px 0 0 0;
 
     .sec-gift-04 {
       position: relative;
@@ -544,8 +588,8 @@ body {
       margin: 0 auto;
 
       .dating-mark {
-        left: 0;
-        top: 40%;
+        left: 43px;
+        bottom: 50px;
       }
 
       &.active {
@@ -556,31 +600,26 @@ body {
 
   .section-news {
     position: relative;
+    padding: 52px 0 0;
+    margin: 0 0 37px;
     z-index: 2;
-    height: 800px;
-    background: url("../img/xgamepc/zh-section-bg-5.jpg") no-repeat center / 100%;
-    margin: -30px 0 0;
-
     .news-title {
       margin: 0 auto 30px;
       display: block;
-      width: 656px;
-      height: 83px;
+      width: 493px;
+      height: 63px;
       background: url("../img/xgamepc/zh-news-title.png") no-repeat center / 100% 100%;
-      margin: 0 auto;
+      margin: 0 auto 18px;
     }
 
     .news-const-group {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 0 30px;
 
       .news-swiper {
-        width: 693px;
-        height: 392px;
+        width: 1082px;
+        height: 612px;
         background: url('../img/xgamepc/zh-news-swiper-bg.png') no-repeat center / 100% 100%;
         padding: 15px;
+        margin: 0 auto 22px;
 
         .news-swiper-container {
           height: 100%;
@@ -618,45 +657,45 @@ body {
       }
 
       .news-list-group {
-        width: 484px;
-        height: 370px;
+        width: 1082px;
+        height: 487px;
         background: rgba(0, 0, 0, .5);
-        border: 1px solid #2d2a2b;
-        margin: 0 0 0 20px;
-        padding: 0 26px;
+        border: 2px solid #4f4e4c;
+        padding: 0 52px;
+        margin: 0 auto;
+        box-shadow: 1px 1px 30px #000;
 
         .news-list-title {
-          height: 50px;
-          border-bottom: 1px solid #3e3c3a;
+          height: 75px;
+          border-bottom: 2px solid #3e3c3a;
 
           ul {
             display: flex;
             align-items: center;
-            height: 50px;
+            height: 73px;
 
             .list-title-item {
-              width: 62px;
               height: 100%;
-              font-size: 18px;
-              border-bottom: 4px solid transparent;
+              font-size: 26px;
+              border-bottom: 7px solid transparent;
               color: #fff;
               text-align: center;
-              line-height: 1;
-              line-height: 50px;
+              line-height: 75px;
               cursor: pointer;
               margin: 0 16px;
+              padding: 0 20px;
 
               &.active {
                 color: #ffba5c;
-                border-bottom: 4px solid #ffba5c;
+                border-bottom: 7px solid #ffba5c;
               }
             }
           }
         }
 
         .news-list-content {
-          height: 320px;
-          padding: 20px 0;
+          height: 412px;
+          padding: 40px 0;
           overflow: hidden;
 
           .list-content {
@@ -667,10 +706,11 @@ body {
               display: block;
               padding: 0 0 0 28px;
               color: #fff;
-              background: url("../img/xgamepc/zh-news-title-icon.png") no-repeat 5px 4px / auto auto;
+              background: url("../img/xgamepc/zh-news-title-icon.png") no-repeat 5px 10px / auto auto;
               text-decoration: none;
-              line-height: 20px;
+              line-height: 30px;
               margin-bottom: 4px;
+              font-size: 24px;
 
               &:hover {
                 text-decoration: underline;
@@ -681,30 +721,27 @@ body {
       }
     }
 
-    .role-title {
-      display: block;
-      width: 656px;
-      height: 79px;
-      background: url("../img/xgamepc/zh-role-title.png") no-repeat center / 100%;
-      margin: 0 auto;
-    }
   }
 
   .section-role {
     position: relative;
-    z-index: 2;
-    height: 800px;
-    background: url("../img/xgamepc/zh-section-bg-6.jpg") no-repeat center / auto 100%;
-    padding-top: 400px;
+    .role-title {
+      position: relative;
+      display: block;
+      width: 493px;
+      height: 62px;
+      background: url("../img/xgamepc/zh-role-title.png") no-repeat center / 100%;
+      margin: 0 auto;
+      z-index: 1;
+    }
 
     .role-swiper-container {
-      position: absolute;
-      top: -250px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 1000px;
-      height: 600px;
+      position: relative;
+      width: 1110px;
+      height: 866px;
+      overflow: unset;
       cursor: grab;
+      z-index: 0;
 
       .swiper-wrapper {
         .swiper-slide {
@@ -715,11 +752,12 @@ body {
 
             .gif-wrap {
               position: absolute;
-              left: 0;
-              bottom: 20px;
-              width: 410px;
-              height: 286px;
-              background: url("../img/xgamepc/zh-role-step-bottom.png") no-repeat center 100% / auto;
+              left: 50%;
+              transform: translate(-50%,0);
+              bottom: 51px;
+              width: 310px;
+              height: 213px;
+              background: url("../img/xgamepc/zh-role-step-bottom.png") no-repeat center 100% / 100% 100%;
               z-index: 1;
 
               .gif-step {
@@ -728,30 +766,11 @@ body {
                 animation: step 2s steps(45) 0s infinite both;
                 -webkit-animation: step 2s steps(45) 0s infinite both;
                 background-size: auto 100%;
-                margin: -60px auto 0;
-
-                &.step-1 {
-                  background-image: url("../img/xgamepc/zh-step-01.png");
-                }
-
-                &.step-2 {
-                  background-image: url("../img/xgamepc/zh-step-02.png");
-                }
-
-                &.step-3 {
-                  background-image: url("../img/xgamepc/zh-step-03.png");
-                }
-
-                &.step-4 {
-                  background-image: url("../img/xgamepc/zh-step-04.png");
-                }
-
-                &.step-5 {
-                  background-image: url("../img/xgamepc/zh-step-05.png");
-                }
-
-                &.step-6 {
-                  background-image: url("../img/xgamepc/zh-step-06.png");
+                margin: -120px auto 0;
+                @for $var from 0 to 7 {
+                  &.step-#{$var} {
+                    background-image: url("../img/xgamepc/zh-step-0#{$var}.png");
+                  }
                 }
               }
             }
@@ -760,8 +779,9 @@ body {
               position: absolute;
               left: 50%;
               transform: translate(-50%, 0);
-              bottom: 40px;
-              z-index: 1;
+              width: 155px;
+              top: 11px;
+              z-index: 2;
             }
 
             .role-img {
@@ -770,6 +790,36 @@ body {
               left: 50%;
               transform: translate(-50%, 0);
               height: 550px;
+              &.role-img-1{
+                height: 732px;
+                top: 7px;
+                left: 628px;
+              }
+              &.role-img-2{
+                height: 520px;
+                top: 151px;
+                left: 650px;
+              }
+              &.role-img-3{
+                height: 1187px;
+                top: -395px;
+                left: 554px;
+              }
+              &.role-img-4{
+                height: 660px;
+                top: 131px;
+                left: 638px;
+              }
+              &.role-img-5{
+                height: 783px;
+                top: 10px;
+                left: 626px;
+              }
+              &.role-img-6{
+                height: 692px;
+                top: 30px;
+                left: 596px;
+              }
             }
           }
         }
@@ -777,36 +827,40 @@ body {
 
       .swiper-button-prev,
       .swiper-button-next {
-        width: 76px;
-        height: 65px;
+        width: 56px;
+        height: 49px;
         transition: all .3s;
         -webkit-transition: all .3s;
       }
 
       .swiper-button-prev {
-        background: url("../img/xgamepc/zh-role-slider-pre.png") no-repeat center / auto 100%;
+        left: -2px;
+        top: 346px;
+        background: url("../img/xgamepc/zh-role-slider-pre.png") no-repeat center / 100% 100%;
 
         &:hover {
-          background: url("../img/xgamepc/zh-role-slider-pre-active.png") no-repeat center / auto 100%;
+          background: url("../img/xgamepc/zh-role-slider-pre-active.png") no-repeat center / 100% 100%;
         }
       }
 
       .swiper-button-next {
-        background: url("../img/xgamepc/zh-role-slider-next.png") no-repeat center / auto 100%;
+        right: -5px;
+        top: 346px;
+        background: url("../img/xgamepc/zh-role-slider-next.png") no-repeat center / 100% 100%;
 
         &:hover {
-          background: url("../img/xgamepc/zh-role-slider-next-active.png") no-repeat center / auto 100%;
+          background: url("../img/xgamepc/zh-role-slider-next-active.png") no-repeat center / 100% 100%;
         }
       }
 
       .swiper-pagination {
         &.swiper-pagination-bullets {
-          bottom: 0;
+          bottom: 1px;
         }
 
         .swiper-pagination-bullet {
-          width: 20px;
-          height: 20px;
+          width: 16px;
+          height: 16px;
           opacity: 1;
           transition: all .3s;
           background: url('../img/xgamepc/zh-role-pagination.png') no-repeat center / 100% 100%;
@@ -851,8 +905,8 @@ body {
 
   .dating-mark {
     position: absolute;
-    width: 145px;
-    height: 143px;
+    width: 96px;
+    height: 96px;
     background: url('../img/xgamepc/zh-dating-mark.png') no-repeat center / 100% 100%;
 
     &.active {
