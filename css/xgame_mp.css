@@ -97,11 +97,13 @@
 商店页
  */
 #root .store-btn {
+  position: relative;
   width: 7.12rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  z-index: 2;
 }
 
 #root .store-btn a {
@@ -530,12 +532,35 @@
 }
 
 #root #role .dataing-icon a {
+  position: relative;
   display: block;
-  background: url("../img/xgamemp/ui_yxz_ysb_0013.png") no-repeat center / 100% 100%;
+  background: url("../img/xgamemp/ui_yxz_ysb_0013.png") no-repeat center / 100% auto;
   height: 2.07rem;
   width: 7.5rem;
 }
+#root #role .dataing-icon a::after{
+  content: '';
+  position: absolute;
+  bottom: .1rem;
+  left: -1.27rem;
+  width: 1.27rem;
+  height: .9rem;
+  background: url('../img/xgamemp/zh-from-submit-btn-sha.png') no-repeat center / 100% 100%;
+  animation: dataing-icon-sha ease-in-out 3.5s infinite;
+}
+@keyframes dataing-icon-sha {
+  0% {
+    left: -1.27rem;
+  }
 
+  50% {
+    left: 7.5rem;
+  }
+
+  100% {
+    left: 7.5rem;
+  }
+}
 /**
 新闻列表
  */
@@ -596,11 +621,14 @@
 }
 
 #root .game-news {
+  position: relative;
+  z-index: 2;
   border: 0.01rem solid #2d2a2b;
   width: 6.93rem;
   height: 3rem;
   margin: 0 auto .4rem;
   padding: 0 .3rem;
+  background: rgba(0, 0, 0, .4);
 }
 
 #root .game-news .news-title {
@@ -676,6 +704,7 @@
   width: 1rem;
   height: 1rem;
   background: url('../img/xgamemp/zh-movie-play.png') no-repeat center / 100% 100%;
+  z-index: 1;
 }
 
 #root #banner .movie .movie-icon {
@@ -731,15 +760,40 @@
 #root #banner .banner-spine {
   height: 12.83rem;
 }
+#root #banner .banner-spine .spine-view.hml{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 12rem;
+  height: 12rem;
+}
 
 #movie .movie-content {
   position: fixed;
   overflow: hidden;
-  top: 30%;
+  top: 0;
   z-index: 9998;
   width: 100%;
-  height: 3.8rem;
-  background: black;
+  height: 100%;
+}
+#movie .movie-content .movie-mark{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+
+#movie .movie-content .movie-view {
+  width: 7.5rem;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#movie .movie-content .movie-view iframe{
+  display: block;
+  margin: 0 auto;
 }
 
 #movie video {

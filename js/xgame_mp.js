@@ -50,7 +50,7 @@ $(document).ready(function () {
     $(".movie-play").css({ "width": "6.5rem", "height": "3.8rem" });
     $(".movie-delete").show();
   });
-  $(".movie-delete").click(function () {
+  $(".J-movie-mark").click(function () {
     // $(".movie-play")[0].pause();
     // $("#root").toggleClass("root-filter")
     // $(".movie-play").css({"width":"1px", "height": "1px"});
@@ -93,9 +93,9 @@ $(document).ready(function () {
 });
 
 function closeVideo() {
-  $(".movie-play")[0].pause();
+  // $(".movie-play")[0].pause();
   $("#root").removeClass("root-filter")
   $(".movie-play").css({ "width": "1px", "height": "1px" });
   $(".movie-content").hide();
-  $(".movie-delete").hide();
+  // $(".movie-delete").hide();
 }

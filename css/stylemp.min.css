@@ -471,6 +471,8 @@ body {
   margin: 0 auto .4rem;
 } */
 #root .section-role .title span {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 6.35rem;
   height: 1.490rem;
@@ -482,7 +484,7 @@ body {
 #root .section-role .swiper-container {
   width: 7.5rem;
   height: 9.6rem;
-  /* overflow: unset; */
+  overflow: unset;
 }
 
 #root .section-role .swiper-container .swiper-wrapper .swiper-slide {
@@ -549,6 +551,7 @@ body {
 
 #root .section-role .swiper-container .swiper-wrapper .swiper-slide .layout .role-detail .gif-wrap .gif-step {
   position: relative;
+  top: 8px;
   width: 135px;
   height: 150px;
   animation: step 2s steps(44) 0s infinite both;
@@ -652,9 +655,9 @@ body {
 }
 
 #root .section-video {
+  position: relative;
   padding: 1.48rem 0 0 0;
   height: 16.22rem;
-  position: relative;
   background: url("../img/xgamemp/zh-section-bg-3.jpg") no-repeat center/100% 100%
 }
 

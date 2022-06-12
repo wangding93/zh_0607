@@ -12,6 +12,7 @@
       that.initIPSelect()
       that.initActivityProgress()
       that.initSelectItem()
+      that.initSpine()
       // that.initMusicPlay()
     },
     // 初始化滑块
@@ -83,6 +84,16 @@
           $(".J-select-value").html(valText)
         }
       })
+    },
+    initSpine:function(){
+      new spine.SpinePlayer("J-spine-hml", {
+        jsonUrl: "../spine/hml/huamulan-2.json",
+        atlasUrl: "../spine/hml/huamulan-2.atlas",
+        animation:"idle",
+        alpha: true,
+        backgroundColor: "#00000000",
+        showControls: false
+      });
     },
     // 处理地区数据
     validSpaceData(isocode){
