@@ -1,10 +1,7 @@
 body {
-  // background: linear-gradient(
-  //   #798d6d 1%,
-  //   #181211 98%
-  // );
   background: #000;
   font-family: "Microsoft YaHei", "Helvetica", Arial, "PingFang SC", "Hiragino Sans GB";
+  overflow-y: auto;
 }
 
 .section-top-banner {
@@ -14,6 +11,14 @@ body {
   height: 60px;
   z-index: 99;
   background: rgba($color: #000, $alpha: .8);
+
+  .section-top-content {
+    width: 1920px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+  }
 
   .banner-btn-group {
     display: flex;
@@ -67,18 +72,56 @@ body {
       }
     }
   }
+
+  .audio-btn {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+
+    &.play {
+      background: url('../img/xgamepc/zh-audio-play.png') no-repeat center / 100% 100%;
+    }
+
+    &.stop {
+      background: url('../img/xgamepc/zh-audio-stop.png') no-repeat center / 100% 100%;
+    }
+
+    &.active {
+      animation: goCircel 8s linear infinite;
+    }
+  }
+
+  .language-btn{
+    position: absolute;
+    top: 18px;
+    right: 168px;
+    width: 74px;
+    height: 24px;
+    &.ch{
+      background: url('../img/xgamepc/zh-language-ch.png') no-repeat center / 100% 100%;
+    }
+    &.en{
+      background: url('../img/xgamepc/zh-language-en.png') no-repeat center / 100% 100%;
+    }
+  }
 }
 
 #position-background {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  width: 100%;
   z-index: 0;
+  overflow: hidden;
 
   .background {
+    display: block;
     width: 1920px;
     height: 1500px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 
     @for $var from 0 to 5 {
       &.background-#{$var} {
@@ -90,11 +133,10 @@ body {
 
 #root {
   box-sizing: border-box;
-  // width: 1400px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   z-index: 2;
-  // transform: scale(1.37) translate(0,657px);
 
   * {
     box-sizing: border-box;
@@ -138,26 +180,89 @@ body {
     }
   }
 
+  .section {
+    position: absolute;
+  }
+
   .section-banner {
     position: relative;
-    width: 1920px;
-    height: auto;
+    width: 100%;
+    height: 1303px;
     margin: 0 auto;
-    // height: 800px;
-    // background: url("../img/xgamepc/zh-section-bg-1.jpg") no-repeat center / 100% 100%;
+    overflow: hidden;
 
     .banner-spine {
-      height: 1303px;
-    }
-
-    .spine-mark {
       position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%, 0);
       width: 1920px;
-      height: 874px;
-      background: url("../img/xgamepc/zh-spine-mark.png") no-repeat center / 100% 100%;
+      height: 1303px;
+      top: 50%;
+      left: 50%;
+      right: 50%;
+      margin-top: -652px;
+      margin-left: -960px;
+
+      .spine-view {
+        position: absolute;
+
+        &.panda {
+          width: 800px;
+          height: 800px;
+          top: 165px;
+          left: 195px;
+        }
+
+        &.hml {
+          width: 1350px;
+          height: 1350px;
+          top: -187px;
+          right: -77px;
+        }
+      }
+
+      .spine-mark {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        height: 874px;
+        background: url("../img/xgamepc/zh-spine-mark.png") no-repeat center / 100% 100%;
+        z-index: 2;
+      }
+
+      .movie {
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 400px;
+        width: 100px;
+        height: 100px;
+        background: url('../img/xgamepc/zh-movie-play.png') no-repeat center / 100% 100%;
+        z-index: 3;
+        cursor: pointer;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: 100px;
+          background: url('../img/xgamepc/zh-movie-index-1.png') no-repeat center / 100% 100%;
+          animation: unCircel linear 4s infinite;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100px;
+          height: 100px;
+          background: url('../img/xgamepc/zh-movie-index-2.png') no-repeat center / 100% 100%;
+          animation: goCircel linear 4s infinite;
+        }
+      }
     }
 
     .spine-detail-group {
@@ -167,6 +272,7 @@ body {
       transform: translate(-50%, 0);
       width: 1400px;
       height: 400px;
+      z-index: 3;
 
       .spine-yy-date {
         font-size: 36px;
@@ -204,11 +310,13 @@ body {
 
   .section-form {
     position: relative;
-    margin: -92px 0 0;
+    z-index: 4;
+    width: 1400px;
+    margin: -92px auto 0;
 
     .form {
       position: relative;
-      left: -148px;
+      left: -295px;
       width: 1703px;
       height: 990px;
       background: url("../img/xgamepc/zh-from-content-bg.png") no-repeat center / 100%;
@@ -505,6 +613,7 @@ body {
   }
 
   .section-gift {
+    width: 1400px;
     position: relative;
     margin: -18px auto 0;
 
@@ -579,6 +688,8 @@ body {
 
   .section-gift-2 {
     position: relative;
+    width: 1400px;
+    margin: 0 auto;
 
     .sec-gift-04 {
       position: relative;
@@ -595,14 +706,30 @@ body {
       &.active {
         background: url("../img/xgamepc/zh-gift-4-active.png") no-repeat center / 100% 100%;
       }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 48%;
+        left: 37%;
+        transform: translate(-50%, -50%);
+        width: 512px;
+        height: 512px;
+        background-image: url('../img/xgamepc/zh-step-hml.png');
+        background-size: auto 100%;
+        animation: step-hml 2s steps(30, end) infinite;
+      }
+
     }
   }
 
   .section-news {
     position: relative;
+    width: 1400px;
     padding: 52px 0 0;
-    margin: 0 0 37px;
+    margin: 0 auto 37px;
     z-index: 2;
+
     .news-title {
       margin: 0 auto 30px;
       display: block;
@@ -711,6 +838,7 @@ body {
               line-height: 30px;
               margin-bottom: 4px;
               font-size: 24px;
+              margin-bottom: 16px;
 
               &:hover {
                 text-decoration: underline;
@@ -725,6 +853,9 @@ body {
 
   .section-role {
     position: relative;
+    width: 1400px;
+    margin: 0 auto;
+
     .role-title {
       position: relative;
       display: block;
@@ -742,6 +873,7 @@ body {
       overflow: unset;
       cursor: grab;
       z-index: 0;
+      margin: 0 auto 26px;
 
       .swiper-wrapper {
         .swiper-slide {
@@ -753,7 +885,7 @@ body {
             .gif-wrap {
               position: absolute;
               left: 50%;
-              transform: translate(-50%,0);
+              transform: translate(-50%, 0);
               bottom: 51px;
               width: 310px;
               height: 213px;
@@ -767,6 +899,7 @@ body {
                 -webkit-animation: step 2s steps(45) 0s infinite both;
                 background-size: auto 100%;
                 margin: -120px auto 0;
+
                 @for $var from 0 to 7 {
                   &.step-#{$var} {
                     background-image: url("../img/xgamepc/zh-step-0#{$var}.png");
@@ -790,32 +923,38 @@ body {
               left: 50%;
               transform: translate(-50%, 0);
               height: 550px;
-              &.role-img-1{
+
+              &.role-img-1 {
                 height: 732px;
                 top: 7px;
                 left: 628px;
               }
-              &.role-img-2{
+
+              &.role-img-2 {
                 height: 520px;
                 top: 151px;
                 left: 650px;
               }
-              &.role-img-3{
+
+              &.role-img-3 {
                 height: 1187px;
                 top: -395px;
                 left: 554px;
               }
-              &.role-img-4{
+
+              &.role-img-4 {
                 height: 660px;
                 top: 131px;
                 left: 638px;
               }
-              &.role-img-5{
+
+              &.role-img-5 {
                 height: 783px;
                 top: 10px;
                 left: 626px;
               }
-              &.role-img-6{
+
+              &.role-img-6 {
                 height: 692px;
                 top: 30px;
                 left: 596px;
@@ -873,8 +1012,8 @@ body {
     }
 
     .footer-notice {
-      width: 950px;
-      height: auto;
+      width: 1088px;
+      min-height: 469px;
       padding: 12px 30px;
       margin: 0 auto;
       background: rgba($color: #000, $alpha: 0.4);
@@ -886,19 +1025,25 @@ body {
         align-items: center;
         color: #ffba61;
         margin: 0 0 26px 0;
+        font-size: 26px;
 
         .icon {
-          width: 19px;
-          height: 19px;
+          width: 48px;
+          height: 48px;
           background: url("../img/xgamepc/zh-note-icon.png") no-repeat center / 100% 100%;
-          margin: 0 10px 0 0;
+          margin: 0 16px 0 0;
         }
       }
 
       .notice-content {
         line-height: 26px;
-        color: #fff;
-        font-size: 16px;
+        color: rgba($color: #fff, $alpha: 0.85);
+        font-size: 20px;
+
+        p {
+          margin-bottom: 8px;
+          line-height: 30px;
+        }
       }
     }
   }
@@ -911,6 +1056,20 @@ body {
 
     &.active {
       background: url('../img/xgamepc/zh-dating-mark-active.png') no-repeat center / 100% 100%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 128px;
+        height: 128px;
+        background-image: url('../img/xgamepc/zh-step-mark.png');
+        background-size: auto 100%;
+        animation: step-mark 2s steps(16, end) infinite;
+      }
+
     }
   }
 
@@ -945,7 +1104,7 @@ body {
         transform: translate(-50%, -50%);
         width: 256px;
         height: 256px;
-        background-image: url('../img/xgamemp/zh-step-fb-btn.png');
+        background-image: url('../img/xgamepc/zh-step-fb-btn.png');
         background-size: auto 100%;
         animation: fb-btn 2s steps(30, end) infinite;
       }
@@ -956,6 +1115,18 @@ body {
 
       &:hover {
         background: url('../img/xgamepc/zh-right-hml-active.png') no-repeat center / 100% 100%;
+      }
+
+      .xl-step {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 256px;
+        height: 256px;
+        background-image: url('../img/xgamepc/zh-step-xl.png');
+        background-size: auto 100%;
+        animation: fb-btn 2s steps(30, end) infinite;
       }
     }
   }
@@ -1131,6 +1302,33 @@ body {
   }
 }
 
+#movie {
+  .movie-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+
+    .movie-mark {
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+
+  .video-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -450px;
+    margin-top: -300px;
+    width: 900px;
+    height: 600px;
+  }
+}
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scaleX(1);
@@ -1230,5 +1428,65 @@ body {
 
   100% {
     left: 500px;
+  }
+}
+
+@keyframes step-hml {
+  0% {
+    background-position: 3000% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes step-hml {
+  0% {
+    background-position: 3000% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes step-mark {
+  0% {
+    background-position: 1600% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@-webkit-keyframes step-mark {
+  0% {
+    background-position: 1600% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes goCircel {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes unCircel {
+  0% {
+    transform: rotate(360deg)
+  }
+
+  100% {
+    transform: rotate(0deg)
   }
 }

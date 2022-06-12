@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/swiper-3.4.2.min.css">
   <link rel="stylesheet" href="./css/stylepc.min.css?v=0324001">
+  <link rel="stylesheet" href="./css/spine-player.css">
   <!-- <link rel="stylesheet" href="./css/xgame_pc.css?v=0324001"> -->
   <script>
     // 活动的开始与结束 true 开始 false 结束
@@ -43,13 +44,18 @@
 <body>
   <!--顶部导航 start-->
   <div class="section-top-banner">
-    <div class="banner-btn-group">
-      <a href="#" class="btn sy">首页</a>
-      <a href="" class="btn ms">马上预约</a>
-      <a href="" class="btn yx">游戏介绍</a>
-      <a href="" class="btn jl">奖励查询</a>
+    <div class="section-top-content">
+      <div class="banner-btn-group">
+        <a href="#" class="btn sy">首页</a>
+        <a href="#form" class="btn ms">马上预约</a>
+        <a href="#news" class="btn yx">游戏介绍</a>
+        <a href="#gift" class="btn jl">奖励查询</a>
+      </div>
+      <a href="#" class="language-btn ch"></a>
+      <a href="javascript:;" class="audio-btn J-audio-btn play"></a>
     </div>
   </div>
+  <!-- 顶部导航 end -->
   <!-- 定位背景图 -->
   <div id="position-background">
     <div class="background background-1"></div>
@@ -57,13 +63,17 @@
     <div class="background background-3"></div>
     <div class="background background-4"></div>
   </div>
-  <!-- 顶部导航 end -->
-  <div id="root" style="overflow:hidden;">
+  <!-- 定位背景图 end -->
+  <div id="root">
     <div id="banner" class="section section-banner">
       <div class="banner-spine">
-        <div class="movie">
-          <span class="movie-icon" id="movie-icon"></span>
+        <div class="movie J-movie-btn">
+          <span class="movie-icon "></span>
         </div>
+
+        <div id="J-spine-panda" class="spine-view panda"></div>
+        <div id="J-spine-hml" class="spine-view hml"></div>
+
         <div class="spine-mark"></div>
         <div class="spine-detail-group">
           <!-- 几月几日开始 -->
@@ -71,7 +81,7 @@
             xx月xx日正式开启召唤
           </p>
           <!-- 立即预约 -->
-          <a class="spine-go-to-yy" href=""></a>
+          <a class="spine-go-to-yy" href="#form"></a>
           <!-- 下载按钮 -->
           <div class="store-btn" id="store-btn">
             <a class="link-btn apple" href="https://apps.apple.com/us/app/id1605703005" target="_blank"></a>
@@ -306,9 +316,12 @@
       <div class="footer-notice" id="footer-notice">
         <p class="notice"> <i class="icon"></i> 注意事项</p>
         <div class="notice-content">
-          <p>1、花木兰，中国古代巾帼英雄，忠孝节义，代父从军古败入侵民族而流传千古，事迹流传至今，唐代皇帝追封为“孝烈将军”</p>
-          <p>2、花木兰故事的流传，应归功于《木兰辞》这一方民歌。花木兰事迹被多种文艺作品所表现，电影、电视剧、歌舞旗剧等。</p>
-          <p>3、木兰的姓氏、籍贯等，史书无确载。在古代小说等文学作品中，共有过四个 “木兰” 的艺术形象，个个都是不让须眉的侠胆烈女。</p>
+          <p>1、活动时间：2022/06/xx/ - 游戏正式上线前。</p>
+          <p>2、参与预约的玩家，需在游戏上线起x日内透过游戏信件件领取预约里程碑奖励，逾期将无法获得本活动奖励。</p>
+          <p>3、本活动中的礼包码请于2022年12月1日前兑换，过期将无法兑换并不予补发。</p>
+          <p>4、活动详见页面活动详情。</p>
+          <p>5、如使用外挂等不正常方式参与本活动，官方将有权取消用户参与及兑换资格。</p>
+          <p>6、《sk xxxxx》营运团队保留对活动的修改权和最终解释权。</p>
         </div>
       </div>
       <div class="dataing-icon" style="position: absolute">
@@ -317,31 +330,14 @@
     </div>
     <!-- 右侧导航 -->
     <div class="slide-right" style="display: none;">
-      <a class="hml" href="https://www.facebook.com/SummonersGAME" target="_blank"></a>
+      <a class="hml" href="https://www.facebook.com/SummonersGAME" target="_blank">
+        <div class="xl-step"></div>
+      </a>
       <a class="fb" href="https://www.facebook.com/SummonersGAME" target="_blank">
         <div class="fb-step"></div>
       </a>
     </div>
-    <!-- 顶部导航区域 start -->
-    <!-- <div id="menu" class="head-right">
-      <div class="ul">
-        <a href="#banner" class="">首页</a>
-        <a href="#store-btn" class="">马上预约</a>
-        <a href="#form-bonus-dataing" class="">预约奖励</a>
-        <a href="#video" class="">游戏介绍</a>
-        <a href="#footer-notice" class="">注意事项</a>
-      </div>
-    </div> -->
-    <!-- 顶部导航区域 end-->
 
-    <!--音乐播放 start -->
-    <!-- <div class="audio-btn">
-      <img src="img/xgamemp/ui_yxz_ysb_0016.png" class="music-play">
-    </div>
-    <audio preload id="myMusic" loop>
-      <source src="img/xgamemp/bgm_niudan.wav" type="audio/mpeg">
-    </audio> -->
-    <!--音乐播放 end-->
     <!-- 活动结束弹窗 -->
     <div class="dialog dialog-is-over J-dialog">
       <div class="content">
@@ -363,16 +359,27 @@
     </div>
     <div class="go-top J-go-top"></div>
   </div>
-  <!-- <div id="movie">
-    <div class="movie-content" style="display: none" id="movie-content">
-      <div class="movie-delete" style="display: none"></div>
-      <video preload="auto" loop="loop" controls="controls" class="movie-play">
-        <source src="img/xgamemp/movie.mp4" type="video/mp4">
-        <source src="https://youtu.be/7rL3VbF8ZRE" type="video/mp4">
-      </video>
+  <div id="movie">
+    <div class="movie-content J-movie-content" style="display: none;">
+      <div class="movie-mark J-movie-mark"></div>
+      <div class="video-view">
+        <iframe width="900" height="600" src="https://www.youtube.com/embed/7rL3VbF8ZRE" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </div> -->
+  </div>
+  <!--音乐播放 start -->
+  <!-- <div class="audio-btn">
+      <img src="img/xgamemp/ui_yxz_ysb_0016.png" class="music-play">
+    </div> -->
+  <audio preload id="myMusic" loop>
+    <source src="./media/bgm_niudan.wav" type="audio/mpeg">
+  </audio>
+  <!--音乐播放 end-->
 
+  <script src="./js/spine-player.min.js"></script>
   <script src="./js/space.js"></script>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/swiper-3.4.2.jquery.min.js"></script>

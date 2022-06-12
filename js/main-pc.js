@@ -10,6 +10,7 @@
       that.initIPSelect()
       that.initActivityProgress()
       that.initSelectItem()
+      that.initSpine()
     },
     // 初始化滑块
     initSwiper: function () {
@@ -20,7 +21,7 @@
         prevButton: '.role-swiper-button-prev',
         autoplay: 2000,
         autoplayDisableOnInteraction: false,
-        effect : 'fade',
+        effect: 'fade',
         fade: {
           crossFade: true,
         }
@@ -60,10 +61,28 @@
         }
       })
     },
+    initSpine: function () {
+      new spine.SpinePlayer("J-spine-panda", {
+        jsonUrl: "../spine/panda/panda.json",
+        atlasUrl: "../spine/panda/panda.atlas",
+        animation:"idle",
+        alpha: true,
+        backgroundColor: "#00000000",
+        showControls: false
+      });
+      new spine.SpinePlayer("J-spine-hml", {
+        jsonUrl: "../spine/hml/huamulan-2.json",
+        atlasUrl: "../spine/hml/huamulan-2.atlas",
+        animation:"idle",
+        alpha: true,
+        backgroundColor: "#00000000",
+        showControls: false
+      });
+    },
     // 处理地区数据
-    validSpaceData(isocode){
+    validSpaceData: function (isocode) {
       // spaceCode 由 /js/space.js 变量引入
-      return spaceCode.find(function(item){
+      return spaceCode.find(function (item) {
         return item.isocode == isocode
       })
     },
@@ -100,7 +119,6 @@
     },
     // 初始化各种Dom事件
     initDomEvent: function () {
-      console.log('init')
       var that = this;
       // 导航的关闭按钮
       $(".J-nav-close").on("click", function () {
@@ -126,7 +144,7 @@
         $(".J-select-option-list").toggle();
       });
       // secect-list 点击事件
-      $(".J-select-option-list").on("click",'.list', function () {
+      $(".J-select-option-list").on("click", '.list', function () {
         $(".J-select-option-list").hide();
         $(".J-select-option-list .list").removeClass("active");
         $(".J-select-value").html($(this).html())
@@ -179,6 +197,29 @@
         var cindex = $(this).data("index")
         $(".J-list-content").hide()
         $(".J-list-content[data-index='" + cindex + "']").show()
+      })
+
+      $(".J-movie-btn").on("click",function(){
+        $(".J-movie-content").show()
+      })
+
+      $(".J-movie-mark").on("click",function(){
+        $(".J-movie-content").hide()
+      })
+
+      var myMusic = document.getElementById("myMusic")
+      $(".J-audio-btn").on('click',function(){
+        if(myMusic.paused){
+          myMusic.play()
+          $(this).removeClass("stop")
+          $(this).addClass("active")
+          $(this).addClass("play")
+        }else{
+          myMusic.pause()
+          $(this).addClass("stop")
+          $(this).removeClass("active")
+          $(this).removeClass("play")
+        }
       })
     },
     // 表单验证通用弹窗
@@ -262,12 +303,12 @@
       })
     },
     // 初始化地区select数据
-    initSelectItem(){
+    initSelectItem() {
       // spaceCode 由 /js/space.js 变量引入
       var tpl = ''
       for (var i = 0; i < spaceCode.length; i++) {
         var element = spaceCode[i];
-        tpl += '<div class="list" data-value="'+ element.val +'">'+ element.valText +'</div>'
+        tpl += '<div class="list" data-value="' + element.val + '">' + element.valText + '</div>'
       }
       $('.J-select-items').append(tpl)
     },
