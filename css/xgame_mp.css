@@ -704,7 +704,7 @@
   width: 1rem;
   height: 1rem;
   background: url('../img/xgamemp/zh-movie-play.png') no-repeat center / 100% 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 #root #banner .movie .movie-icon {
@@ -762,11 +762,24 @@
 }
 #root #banner .banner-spine .spine-view.hml{
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 50%;
   transform: translate(-50%,0);
   width: 12rem;
   height: 12rem;
+}
+#root #banner .spine-mark {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: 0;
+  width: 7.5rem;
+  height: 8.3rem;
+  background: url('../img/xgamemp/zh-spine-mark.png') no-repeat center / 100% 100%;
+}
+#root #banner .banner-detail{
+  position: relative;
+  z-index: 2;
 }
 
 #movie .movie-content {
