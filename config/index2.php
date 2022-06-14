@@ -24,6 +24,7 @@ try
         $phone = $_REQUEST['phone'];
 	    $area = $_REQUEST['area'];
         $area = "00".$area;
+        $phone = $area.$phone;
 //        $phone = $area.$phone;
         if(empty($phone)){
             close_error($link,-1);
