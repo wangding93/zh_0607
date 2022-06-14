@@ -63,16 +63,16 @@
     },
     initSpine: function () {
       new spine.SpinePlayer("J-spine-panda", {
-        jsonUrl: "../spine/panda/panda.json",
-        atlasUrl: "../spine/panda/panda.atlas",
+        jsonUrl: "spine/panda/panda.json",
+        atlasUrl: "spine/panda/panda.atlas",
         animation:"idle",
         alpha: true,
         backgroundColor: "#00000000",
         showControls: false
       });
       new spine.SpinePlayer("J-spine-hml", {
-        jsonUrl: "../spine/hml/huamulan-2.json",
-        atlasUrl: "../spine/hml/huamulan-2.atlas",
+        jsonUrl: "spine/hml/huamulan-1.json",
+        atlasUrl: "spine/hml/huamulan-1.atlas",
         animation:"idle",
         alpha: true,
         backgroundColor: "#00000000",
