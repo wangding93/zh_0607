@@ -23,7 +23,7 @@ try
     }elseif(isset($action) && $action == 'sendcode'){//立即登录
         $phone = $_REQUEST['phone'];
 	    $area = $_REQUEST['area'];
-        $area = substr($area,1,5);
+        $area = "00".$area;
 //        $phone = $area.$phone;
         if(empty($phone)){
             close_error($link,-1);
@@ -66,13 +66,7 @@ try
     }elseif(isset($action) && $action == 'setphone'){//点击发送验证码
         $phone = $_REQUEST['phone'];
 	    $area = $_REQUEST['area'];
-        // $area = substr($area,1,5);
-        //判断
-        if(in_array($area, ["852"]))
-        {
-            //处理 前面加上00 852 --> 00852
-            $area = "00".$area;
-        }
+        $area = "00".$area;
         // TODO
         // $sms_re = sendMessageNew ("0085267642412",8888);
         $phone = $area.$phone;
