@@ -166,11 +166,31 @@
   background: url("../img/xgamemp/zh-form-bounus-tips.png") no-repeat center / 100% 100%;
 }
 
-#root #form .form-bounus-tips .bounus-gift {
-  width: 80%;
-  height: 1.6rem;
-  margin: 0 auto;
-  background: url("../img/xgamemp/zh-form-bounus-gift.png") no-repeat center / 100% auto;
+#root #form .form-bounus-tips .bounus-gift-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#root #form .form-bounus-tips .bounus-gift-group .bounus-gift-item{
+  margin: 0 .2rem;
+}
+#root #form .form-bounus-tips .bounus-gift-group .bounus-gift-item .gift-item-img{
+  width: 1.31rem;
+  height: 1.31rem;
+}
+#root #form .form-bounus-tips .bounus-gift-group .bounus-gift-item .gift-item-name{
+  font-size: .14rem;
+  color: #ffdf02;
+  text-align: center;
+}
+#root #form .form-bounus-tips .bounus-gift-group .bounus-gift-item .gift-item-img.item-1{
+  background: url('../img/xgamemp/zh-gift-item-img-1.png') no-repeat center / 100% 100%;
+}
+#root #form .form-bounus-tips .bounus-gift-group .bounus-gift-item .gift-item-img.item-2{
+  background: url('../img/xgamemp/zh-gift-item-img-2.png') no-repeat center / 100% 100%;
+}
+#root #form .form-bounus-tips .bounus-gift-group .bounus-gift-item .gift-item-img.item-3{
+  background: url('../img/xgamemp/zh-gift-item-img-3.png') no-repeat center / 100% 100%;
 }
 
 #root #form .form-bonus-dating {
