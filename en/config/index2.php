@@ -144,7 +144,7 @@ function get_real_ip()
 }
 
 function sendMessageNew($phone, $code) {
-    include("../../aliyundysms/api_demo/SmsDemo.php");
+    include("../../../aliyundysms/api_demo/SmsDemo.php");
     $response = SmsDemo::sendSms($phone,$code);
     $re_json = json_encode($response);
     $file_name = './log/'.date('Ymd',time()).".log";
