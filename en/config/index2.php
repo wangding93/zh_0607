@@ -23,7 +23,8 @@ try
     }elseif(isset($action) && $action == 'sendcode'){//立即登录
         $phone = $_REQUEST['phone'];
 	    $area = $_REQUEST['area'];
-        $area = substr($area,1,5);
+        $area = "00".$area;
+        $phone = $area.$phone;
 //        $phone = $area.$phone;
         if(empty($phone)){
             close_error($link,-1);
@@ -66,7 +67,8 @@ try
     }elseif(isset($action) && $action == 'setphone'){//点击发送验证码
         $phone = $_REQUEST['phone'];
 	    $area = $_REQUEST['area'];
-        $area = substr($area,1,5);
+        $area = "00".$area;
+        $phone = $area.$phone;
 //        $phone = $area.$phone;
 //	var_dump($phone);exit;
 
@@ -145,7 +147,8 @@ function get_real_ip()
 
 function sendMessageNew($phone, $code) {
     include("../../../aliyundysms/api_demo/SmsDemo.php");
-    $response = SmsDemo::sendSms($phone,$code);
+    // 英文短信签名
+    $response = SmsDemo::sendSms($phone,$code,$modelid='SMS_168825266',$signName='魔武紀元');
     $re_json = json_encode($response);
     $file_name = './log/'.date('Ymd',time()).".log";
 //    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>in>>>>>'.$phone.'>>>'.$code."\n",FILE_APPEND);

@@ -146,7 +146,8 @@ function get_real_ip()
 
 function sendMessageNew($phone, $code) {
     include("../aliyundysms/api_demo/SmsDemo.php");
-    $response = SmsDemo::sendSms($phone,$code);
+    // 中文短信签名
+    $response = SmsDemo::sendSms($phone,$code,$modelid='SMS_168825266',$signName='魔武紀元');
     // var_dump($response);exit;
     $re_json = json_encode($response);
     $file_name = './log/'.date('Ymd',time()).".log";
