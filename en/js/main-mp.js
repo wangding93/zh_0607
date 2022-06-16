@@ -66,7 +66,7 @@
     initIPSelect: function () {
       var that = activePage;
       var val = '65';
-      var valText = '新加坡 +65';
+      var valText = 'SG +65';
       $.ajax({
         type: "get",
         url: "./config/index2.php?action=iplookup",
@@ -199,7 +199,7 @@
     },
     // 表单验证通用弹窗
     showDialog: function (e) {
-      e ? e : e = "输入的手机号码/验证码不正确！"
+      e ? e : e = "Phone number/code incorrect!"
       $(".dialog-phone").show()
       $(".dialog-phone .J-dialog-phone-text").html(e)
     },
@@ -208,10 +208,10 @@
       var that = activePage;
       var phoneNumber = $('input[name="phone"]').val();
       if (phoneNumber == '') {
-        return that.showDialog("输入的手机号码不能为空！");
+        return that.showDialog("Phone number can't be empty");
       }
       if (phoneNumber.length != that.phoneValidLength && that.phoneValidLength != 99) {
-        return that.showDialog("输入的手机号码错误！");
+        return that.showDialog("Phone number incorrect!");
       }
       var _data = $("form").serialize();
       console.log(_data);
@@ -223,17 +223,17 @@
         success: function (e) {
           var result = JSON.parse(e).result;
           if (result == 1) {
-            that.showDialog("验证码已发送！");
+            that.showDialog("Code sent!");
           } else if (result == -2) {
-            that.showDialog("该手机号已经成功预约。");
+            that.showDialog("The phone number subscribed successfully");
           } else {
-            that.showDialog("短信发送失败");
+            that.showDialog("Message sending failed");
           }
           $('.J-code-btn').prop("disabled", false)
         },
         error: function () {
           $('.J-code-btn').prop("disabled", false)
-          that.showDialog("短信发送失败");
+          that.showDialog("Message sending failed");
         }
       })
     },
@@ -243,7 +243,7 @@
       var phoneNumber = $('input[name="phone"]').val();
       var codeNumber = $('input[name="code"]').val();
       if (phoneNumber == '' || codeNumber == '') {
-        return that.showDialog("输入的手机号码/验证码不正确！");
+        return that.showDialog("Phone number/code incorrect!");
       }
       $('.J-submit-btn').prop("disabled", true);
       var _data = $("form").serialize();
@@ -256,7 +256,7 @@
           $('.J-submit-btn').prop("disabled", false);
           if (result == 1) {
             $('form')[0].reset();
-            that.showDialog("预约成功！");
+            that.showDialog("Subscribe successfully!");
             // faceboox埋点
             try {
               fbq('track', 'CompleteRegistration');
@@ -264,13 +264,13 @@
           } else if (result == 0) {
             that.showDialog("action参数错误或未知异常");
           } else if (result == -1) {
-            that.showDialog("手机号码或验证码格式错误");
+            that.showDialog("Phone number/code incorrect!");
           } else if (result == -2) {
-            that.showDialog("验证码错误！");
+            that.showDialog("Code incorrect!");
           } else if (result == -4) {
-            that.showDialog("激活码发完了");
+            that.showDialog("Activation codes run out ");
           } else {
-            that.showDialog("失败！");
+            that.showDialog("Failed!");
           }
         },
         error: function () {
