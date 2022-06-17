@@ -146,15 +146,14 @@ function get_real_ip()
 }
 
 function sendMessageNew($phone, $code) {
-    include("../../../aliyundysms/api_demo/SmsDemo.php");
+    include("../../aliyundysms/api_demo/SmsDemo.php");
     // 英文短信签名
     $response = SmsDemo::sendSms($phone,$code,$modelid='SMS_168825266',$signName='魔武紀元');
     $re_json = json_encode($response);
     $file_name = './log/'.date('Ymd',time()).".log";
 //    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>in>>>>>'.$phone.'>>>'.$code."\n",FILE_APPEND);
 //    $re = file_put_contents($file_name,date('Y-m-d H:i:s').'>>>out>>>>>'.$re_json."\n",FILE_APPEND);
-
-    $sgins = false ;
+    $sgins = false;
     $ret = json_decode($re_json,true);
     if($ret['Message'] == 'OK'){
         $sgins = true;
