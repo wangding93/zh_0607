@@ -157,25 +157,30 @@ body {
       &.apple {
         background: url('../img/xgamepc/zh-downlink-apple.png?v=2022061202') no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url('../img/xgamepc/zh-downlink-apple-active.png?v=2022061202') no-repeat center / 100% 100%;
-        }
+        // &:hover {
+        //   background: url('../img/xgamepc/zh-downlink-apple-active.png?v=2022061202') no-repeat center / 100% 100%;
+        // }
       }
 
       &.google {
         background: url('../img/xgamepc/zh-downlink-google.png?v=2022061202') no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url('../img/xgamepc/zh-downlink-google-active.png?v=2022061202') no-repeat center / 100% 100%;
-        }
+        // &:hover {
+        //   background: url('../img/xgamepc/zh-downlink-google-active.png?v=2022061202') no-repeat center / 100% 100%;
+        // }
       }
 
       &.fb {
         background: url('../img/xgamepc/zh-downlink-fb.png?v=2022061202') no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url('../img/xgamepc/zh-downlink-fb-active.png?v=2022061202') no-repeat center / 100% 100%;
-        }
+        // &:hover {
+        //   background: url('../img/xgamepc/zh-downlink-fb-active.png?v=2022061202') no-repeat center / 100% 100%;
+        // }
+      }
+      &:hover {
+        // background: url("../img/pc/link-btn-i-active.png?v=2022061202") no-repeat center / 100%;
+        -webkit-filter: brightness(1.5);
+        filter: brightness(1.5);
       }
     }
   }
