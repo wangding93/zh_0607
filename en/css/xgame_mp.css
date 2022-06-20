@@ -997,3 +997,19 @@ ipad
 /*    color: #0f0 !important;*/
 /*    outline: solid #f00 1px !important;*/
 /*}*/
+.language-btn{
+  position: absolute;
+  top: 1.3rem;
+  left: .16rem;
+  display: block;
+  width: .84rem;
+  height: .34rem;
+  border-radius: .1rem;
+  z-index: 999;
+}
+.language-btn.ch{
+  background: rgba(0, 0, 0, .6) url(../img/xgamemp/zh-language-ch.png) no-repeat center / .74rem .24rem;
+}
+.language-btn.en{
+  background: rgba(0, 0, 0, .6) url(../img/xgamemp/zh-language-en.png) no-repeat center / .74rem .24rem;
+}

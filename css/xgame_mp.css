@@ -1,9 +1,10 @@
 .section-top-banner {
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   background: url("../img/xgamemp/ui_yxz_ysb_0006.png") no-repeat center / 100% 100%;
   width: 100%;
-  height: 58px;
+  height: 1.16rem;
   z-index: 999;
 }
 
@@ -997,3 +998,19 @@ ipad
 /*    color: #0f0 !important;*/
 /*    outline: solid #f00 1px !important;*/
 /*}*/
+.language-btn{
+  position: absolute;
+  top: 1.3rem;
+  left: .16rem;
+  display: block;
+  width: .84rem;
+  height: .34rem;
+  border-radius: .1rem;
+  z-index: 999;
+}
+.language-btn.ch{
+  background: rgba(0, 0, 0, .6) url(../img/xgamemp/zh-language-ch.png) no-repeat center / .74rem .24rem;
+}
+.language-btn.en{
+  background: rgba(0, 0, 0, .6) url(../img/xgamemp/zh-language-en.png) no-repeat center / .74rem .24rem;
+}
