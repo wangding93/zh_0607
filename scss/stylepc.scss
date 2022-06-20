@@ -38,37 +38,42 @@ body {
       &.sy {
         background: url("../img/xgamepc/zh-banner-sy.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
 
-        &:hover {
-          text-shadow: 1px 1px 5px #fafce0;
-          background: url("../img/xgamepc/zh-banner-sy-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
-        }
+        // &:hover {
+        //   text-shadow: 1px 1px 5px #fafce0;
+        //   background: url("../img/xgamepc/zh-banner-sy-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
+        // }
       }
 
       &.ms {
         background: url("../img/xgamepc/zh-banner-ms.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
 
-        &:hover {
-          text-shadow: 1px 1px 5px #fafce0;
-          background: url("../img/xgamepc/zh-banner-ms-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
-        }
+        // &:hover {
+        //   text-shadow: 1px 1px 5px #fafce0;
+        //   background: url("../img/xgamepc/zh-banner-ms-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
+        // }
       }
 
       &.yx {
         background: url("../img/xgamepc/zh-banner-yx.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
 
-        &:hover {
-          text-shadow: 1px 1px 5px #fafce0;
-          background: url("../img/xgamepc/zh-banner-yx-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
-        }
+        // &:hover {
+        //   text-shadow: 1px 1px 5px #fafce0;
+        //   background: url("../img/xgamepc/zh-banner-yx-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
+        // }
       }
 
       &.jl {
         background: url("../img/xgamepc/zh-banner-jl.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
 
-        &:hover {
-          text-shadow: 1px 1px 5px #fafce0;
-          background: url("../img/xgamepc/zh-banner-jl-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
-        }
+        // &:hover {
+        //   text-shadow: 1px 1px 5px #fafce0;
+        //   background: url("../img/xgamepc/zh-banner-jl-active.png?v=2022061202") no-repeat 8px 8px / 44px 44px;
+        // }
+      }
+      &:hover{
+        text-shadow: 1px 1px 5px #fafce0;
+        -webkit-filter: brightness(1.5);
+        filter: brightness(1.5);
       }
     }
   }
@@ -153,29 +158,33 @@ body {
       width: 170px;
       height: 56px;
       transition: all .3s;
+      &:hover{
+        -webkit-filter: brightness(1.5);
+        filter: brightness(1.5);
+      }
 
       &.apple {
         background: url('../img/xgamepc/zh-downlink-apple.png?v=2022061202') no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url('../img/xgamepc/zh-downlink-apple-active.png?v=2022061202') no-repeat center / 100% 100%;
-        }
+        // &:hover {
+        //   background: url('../img/xgamepc/zh-downlink-apple-active.png?v=2022061202') no-repeat center / 100% 100%;
+        // }
       }
 
       &.google {
         background: url('../img/xgamepc/zh-downlink-google.png?v=2022061202') no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url('../img/xgamepc/zh-downlink-google-active.png?v=2022061202') no-repeat center / 100% 100%;
-        }
+        // &:hover {
+        //   background: url('../img/xgamepc/zh-downlink-google-active.png?v=2022061202') no-repeat center / 100% 100%;
+        // }
       }
 
       &.fb {
         background: url('../img/xgamepc/zh-downlink-fb.png?v=2022061202') no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url('../img/xgamepc/zh-downlink-fb-active.png?v=2022061202') no-repeat center / 100% 100%;
-        }
+        // &:hover {
+        //   background: url('../img/xgamepc/zh-downlink-fb-active.png?v=2022061202') no-repeat center / 100% 100%;
+        // }
       }
     }
   }
@@ -267,7 +276,7 @@ body {
 
     .spine-detail-group {
       position: absolute;
-      bottom: 0;
+      bottom: -15px;
       left: 50%;
       transform: translate(-50%, 0);
       width: 1400px;
@@ -499,10 +508,14 @@ body {
             background: url("../img/xgamepc/zh-form-code-btn.png?v=2022061202") no-repeat center / 100% 100%;
             transition: all .3s;
             -webkit-transition: all .3s;
-
-            &:hover {
-              background: url("../img/xgamepc/zh-form-code-btn-active.png?v=2022061202") no-repeat center / 100% 100%;
+            &:hover{
+              -webkit-filter: brightness(1.5);
+              filter: brightness(1.5);
             }
+            // &:hover {
+              
+            //   background: url("../img/xgamepc/zh-form-code-btn-active.png?v=2022061202") no-repeat center / 100% 100%;
+            // }
           }
         }
 
@@ -523,8 +536,12 @@ body {
             margin: 0 auto;
             overflow: hidden;
 
-            &:hover {
-              background: url("../img/xgamepc/zh-form-submit-btn-active.png?v=2022061202") no-repeat center / 100% 100%;
+            // &:hover {
+            //   background: url("../img/xgamepc/zh-form-submit-btn-active.png?v=2022061202") no-repeat center / 100% 100%;
+            // }
+            &:hover{
+              -webkit-filter: brightness(1.5);
+              filter: brightness(1.5);
             }
 
             &::after {
@@ -556,8 +573,12 @@ body {
             transition: all .3s;
             -webkit-transition: all .3s;
 
-            &:hover {
-              background: url("../img/xgamepc/zh-form-fb-btn-active.png?v=2022061202") no-repeat center / 100% 100%;
+            // &:hover {
+            //   background: url("../img/xgamepc/zh-form-fb-btn-active.png?v=2022061202") no-repeat center / 100% 100%;
+            // }
+            &:hover{
+              -webkit-filter: brightness(1.5);
+              filter: brightness(1.5);
             }
 
             .fb-fire {
@@ -977,8 +998,12 @@ body {
         top: 346px;
         background: url("../img/xgamepc/zh-role-slider-pre.png?v=2022061202") no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url("../img/xgamepc/zh-role-slider-pre-active.png?v=2022061202") no-repeat center / 100% 100%;
+        // &:hover {
+        //   background: url("../img/xgamepc/zh-role-slider-pre-active.png?v=2022061202") no-repeat center / 100% 100%;
+        // }
+        &:hover{
+          -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
         }
       }
 
@@ -987,8 +1012,12 @@ body {
         top: 346px;
         background: url("../img/xgamepc/zh-role-slider-next.png?v=2022061202") no-repeat center / 100% 100%;
 
-        &:hover {
-          background: url("../img/xgamepc/zh-role-slider-next-active.png?v=2022061202") no-repeat center / 100% 100%;
+        // &:hover {
+        //   background: url("../img/xgamepc/zh-role-slider-next-active.png?v=2022061202") no-repeat center / 100% 100%;
+        // }
+        &:hover{
+          -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
         }
       }
 
@@ -1093,10 +1122,13 @@ body {
     .fb {
       background: url('../img/xgamepc/zh-right-fb.png?v=2022061202') no-repeat center / 100% 100%;
 
-      &:hover {
-        background: url('../img/xgamepc/zh-right-fb-active.png?v=2022061202') no-repeat center / 100% 100%;
+      // &:hover {
+      //   background: url('../img/xgamepc/zh-right-fb-active.png?v=2022061202') no-repeat center / 100% 100%;
+      // }
+      &:hover{
+        -webkit-filter: brightness(1.5);
+        filter: brightness(1.5);
       }
-
       .fb-step {
         position: absolute;
         top: 50%;
@@ -1113,10 +1145,13 @@ body {
     .hml {
       background: url('../img/xgamepc/zh-right-hml.png?v=2022061202') no-repeat center / 100% 100%;
 
-      &:hover {
-        background: url('../img/xgamepc/zh-right-hml-active.png?v=2022061202') no-repeat center / 100% 100%;
+      // &:hover {
+      //   background: url('../img/xgamepc/zh-right-hml-active.png?v=2022061202') no-repeat center / 100% 100%;
+      // }
+      &:hover{
+        -webkit-filter: brightness(1.5);
+        filter: brightness(1.5);
       }
-
       .xl-step {
         position: absolute;
         top: 50%;
@@ -1292,7 +1327,7 @@ body {
     width: 100px;
     height: 100px;
     background: url("../img/xgamepc/go-top.png?v=2022061202") no-repeat center / 100%;
-    z-index: 1;
+    z-index: 999;
     cursor: pointer;
 
     &:hover {
