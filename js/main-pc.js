@@ -224,7 +224,7 @@
     },
     // 表单验证通用弹窗
     showDialog: function (e) {
-      e ? e : e = "輸入的手機號碼/驗證碼不正確！"
+      e ? e : e = "输入的手机号码/验证码不正确！"
       $(".dialog-phone").show()
       $(".dialog-phone .J-dialog-phone-text").html(e)
     },
@@ -233,10 +233,10 @@
       var that = activePage;
       var phoneNumber = $('input[name="phone"]').val();
       if (phoneNumber == '') {
-        return that.showDialog("輸入的手機號碼不能為空");
+        return that.showDialog("输入的手机号码不能为空！");
       }
       if (phoneNumber.length != that.phoneValidLength && that.phoneValidLength != 99) {
-        return that.showDialog("輸入的手機號碼錯誤！");
+        return that.showDialog("输入的手机号码错误！ ");
       }
       var _data = $("form").serialize();
       $('.J-code-btn').prop("disabled", true)
@@ -247,17 +247,17 @@
         success: function (e) {
           var result = JSON.parse(e).result;
           if (result == 1) {
-            that.showDialog("驗證碼已發送！");
+            that.showDialog("验证码已发送！ ");
           } else if (result == -2) {
-            that.showDialog("該手機號已經成功預約。");
+            that.showDialog("该手机号已经成功预约。");
           } else {
-            that.showDialog("簡訊發送失敗");
+            that.showDialog("短信发送失败！");
           }
           $('.J-code-btn').prop("disabled", false)
         },
         error: function () {
           $('.J-code-btn').prop("disabled", false)
-          that.showDialog("簡訊發送失敗");
+          that.showDialog("短信发送失败！");
         }
       })
     },
@@ -267,7 +267,7 @@
       var phoneNumber = $('input[name="phone"]').val();
       var codeNumber = $('input[name="code"]').val();
       if (phoneNumber == '' || codeNumber == '') {
-        return that.showDialog("輸入的手機號碼/驗證碼不正確！");
+        return that.showDialog("输入的手机号码/验证码不正确！");
       }
       $('.J-submit-btn').prop("disabled", true);
       var _data = $("form").serialize();
@@ -280,21 +280,21 @@
           $('.J-submit-btn').prop("disabled", false);
           if (result == 1) {
             $('form')[0].reset();
-            that.showDialog("預約成功！");
+            that.showDialog("预约成功！");
             // faceboox埋点
             try {
               fbq('track', 'CompleteRegistration');
             } catch (error) { }
           } else if (result == 0) {
-            that.showDialog("action參數錯誤或未知異常");
+            that.showDialog("action参数错误或未知异常");
           } else if (result == -1) {
-            that.showDialog("手機號或者驗證碼格式錯誤");
+            that.showDialog("手机号或者验证码格式错误");
           } else if (result == -2) {
-            that.showDialog("驗證碼错误！");
+            that.showDialog("验证码错误！");
           } else if (result == -4) {
-            that.showDialog("激活碼發完了");
+            that.showDialog("激活码发完了");
           } else {
-            that.showDialog("失敗！");
+            that.showDialog("失败！");
           }
         },
         error: function () {
