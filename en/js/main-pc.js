@@ -248,6 +248,13 @@
           var result = JSON.parse(e).result;
           if (result == 1) {
             that.showDialog("Code sent!");
+            
+            // faceboox埋点
+            try {
+              fbq('track', 'Contact');
+            } catch (error) { }
+
+            
           } else if (result == -2) {
             that.showDialog("The phone number subscribed successfully");
           } else {

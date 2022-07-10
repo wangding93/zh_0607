@@ -224,6 +224,13 @@
           var result = JSON.parse(e).result;
           if (result == 1) {
             that.showDialog("验证码已发送！");
+
+            // faceboox埋点
+            try {
+              fbq('track', 'CompleteRegistration');
+            } catch (error) { }
+
+            
           } else if (result == -2) {
             that.showDialog("该手机号已经成功预约。");
           } else {
